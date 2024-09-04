@@ -1,0 +1,36 @@
+.btns {
+  @include adaptiv-value("width", 179, 50, 0);
+  @include adaptiv-value("height", 56, 20, 0);
+  color: rgba(35, 37, 54, 0.8);
+  font-family: "Sen";
+  font-weight: 700;
+  @include adaptiv-value("font-size", 18, 10, 0);
+  @include adaptiv-value("line-height", 24, 14, 0);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(255, 245, 238, 1);
+    color: rgba(35, 37, 54, 1);
+  }
+}
+
+.btn {
+  @include adaptiv-value("width", 204, 84, 0);
+  @include adaptiv-value("height", 56, 26, 0);
+  background: #ffd050;
+  font-family: "Sen";
+  font-weight: 700;
+  @include adaptiv-value("font-size", 18, 12, 0);
+  @include adaptiv-value("line-height", 24, 18, 0);
+  color: rgba(35, 37, 54, 0.7);
+
+  &:hover {
+    background: #edc14a;
+    color: rgba(35, 37, 54, 1);
+  }
+}
