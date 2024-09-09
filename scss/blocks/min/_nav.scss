@@ -24,6 +24,10 @@
     @media (max-width: 425px) {
       margin-top: 11px;
     }
+
+    @media (min-width: 2000px) {
+      width: 738px;
+    }
   }
 
   &__img {

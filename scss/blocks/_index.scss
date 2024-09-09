@@ -7,8 +7,6 @@
   height: 5996px;
 }
 
-// &__container to do HEIGHT
-
 // ================================
 .main-post {
   &__container {
@@ -16,45 +14,49 @@
     background-repeat: no-repeat;
     background-size: cover;
     color: #ffffff;
-    // @include adaptiv-value("height", 720, 220, 0);
+    @include adaptiv-value("height", 720, 220, 0);
     @include adaptiv-value("padding-top", 208, 10, 0);
     @include adaptiv-value("padding-left", 80, 15, 0);
 
-    &__body {
+    @media (min-width: 2000px) {
+      padding-top: 108px;
+      height: 650px;
+    }
+  }
+  &__body {
+  }
+
+  h4 {
+    font-weight: 500;
+    @include adaptiv-value("font-size", 16, 10, 0);
+    @include adaptiv-value("line-height", 20, 14, 0);
+    @include adaptiv-value("letter-spacing", 3, 0, 0);
+    text-transform: uppercase;
+    @include adaptiv-value("margin-bottom", 24, 12, 0);
+  }
+
+  h1 {
+    font-family: "Sen";
+    font-style: normal;
+    font-weight: 700;
+    @include adaptiv-value("font-size", 56, 18, 0);
+    @include adaptiv-value("line-height", 64, 20, 0);
+    @include adaptiv-value("letter-spacing", -2, 0, 0);
+    @include adaptiv-value("margin-bottom", 24, 12, 0);
+  }
+
+  p {
+    font-weight: 400;
+    @include adaptiv-value("font-size", 16, 8, 0);
+    @include adaptiv-value("line-height", 28, 14, 0);
+    @include adaptiv-value("margin-bottom", 24, 12, 0);
+
+    span {
+      color: rgba(255, 208, 80, 1);
     }
 
-    h4 {
-      font-weight: 500;
-      @include adaptiv-value("font-size", 16, 10, 0);
-      @include adaptiv-value("line-height", 20, 14, 0);
-      @include adaptiv-value("letter-spacing", 3, 0, 0);
-      text-transform: uppercase;
-      @include adaptiv-value("margin-bottom", 24, 12, 0);
-    }
-
-    h1 {
-      font-family: "Sen";
-      font-style: normal;
-      font-weight: 700;
-      @include adaptiv-value("font-size", 56, 18, 0);
-      @include adaptiv-value("line-height", 64, 20, 0);
-      @include adaptiv-value("letter-spacing", -2, 0, 0);
-      @include adaptiv-value("margin-bottom", 24, 12, 0);
-    }
-
-    p {
-      font-weight: 400;
-      @include adaptiv-value("font-size", 16, 8, 0);
-      @include adaptiv-value("line-height", 28, 14, 0);
-      @include adaptiv-value("margin-bottom", 24, 12, 0);
-
-      span {
-        color: rgba(255, 208, 80, 1);
-      }
-
-      &:last-child {
-        @include adaptiv-value("margin-bottom", 48, 24, 0);
-      }
+    &:last-child {
+      @include adaptiv-value("margin-bottom", 48, 24, 0);
     }
   }
 }
@@ -62,25 +64,21 @@
 // ================================
 .posts {
   &__container {
-    @include adaptiv-value("padding-top", 128, 30, 0);
+    @include adaptiv-value("padding-top", 128, 25, 0);
     @include adaptiv-value("padding-left", 80, 15, 0);
-    // @include adaptiv-value("padding-bottom", 61, 15, 0);
-    // @include adaptiv-value("height", 804, 400, 0);
-    // height: 804px;
+    // @include adaptiv-value("padding-bottom", 15, 0, 0);
+    @include adaptiv-value("height", 932, 390, 0);
+    // height: 932px;
     display: flex;
     justify-content: space-around;
     @include adaptiv-value("gap", 32, 5, 0);
     background-color: #ffffff;
     color: #232536;
 
-    // @media (max-width) {
-    //   @include adaptiv-value("padding-bottom", 61, 15, 0);
+    // @media (min-width: 1441px) {
+    //   height: 1050px;
+    //   padding-bottom: 61px;
     // }
-
-    @media (min-width: 1441px) {
-      height: 1050px;
-      // padding-bottom: 61px;
-    }
   }
 
   &__featured {
@@ -222,16 +220,16 @@
     margin: 0 auto;
     background-color: #ffffff;
     color: #232536;
-    // @include adaptiv-value("height", 500, 500, 0);
+    @include adaptiv-value("height", 528, 350, 0);
     // height: 500px;
     justify-content: space-evenly;
     background-image: url(../img/about_us/Group_9200.png);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: contain;
-    @include adaptiv-value("padding-top", 96, 24, 0);
+    @include adaptiv-value("padding-top", 128, 44, 0);
     @include adaptiv-value("padding-left", 80, 30, 0);
-    @include adaptiv-value("padding-bottom", 36, 0, 0);
+    // @include adaptiv-value("padding-bottom", 36, 0, 0);
     @include adaptiv-value("gap", 22, 10, 0);
   }
 
@@ -257,7 +255,7 @@
     }
     p {
       font-weight: 400;
-      @include adaptiv-value("font-size", 16, 14, 0);
+      @include adaptiv-value("font-size", 16, 10, 0);
       @include adaptiv-value("line-height", 28, 18, 0);
       @include adaptiv-value("padding-bottom", 16, 8, 0);
       color: #6d6e76;
@@ -286,14 +284,14 @@
     h3 {
       font-family: "Sen";
       font-weight: 700;
-      @include adaptiv-value("font-size", 28, 16, 0);
+      @include adaptiv-value("font-size", 28, 12, 0);
       @include adaptiv-value("line-height", 40, 20, 0);
       @include adaptiv-value("letter-spacing", -1, 0, 0);
       @include adaptiv-value("padding-bottom", 16, 8, 0);
     }
     p {
       font-weight: 400;
-      @include adaptiv-value("font-size", 16, 14, 0);
+      @include adaptiv-value("font-size", 16, 10, 0);
       @include adaptiv-value("line-height", 28, 18, 0);
       color: #6d6e76;
     }
@@ -306,9 +304,10 @@
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
-    @include adaptiv-value("padding-top", 127, 15, 0);
+    @include adaptiv-value("padding-top", 128, 15, 0);
     @include adaptiv-value("padding-left", 80, 30, 0);
     color: rgb(35, 37, 54);
+    // height: 452px;
   }
 
   &__tittle {
@@ -402,7 +401,7 @@
     background-color: #ffffff;
     @include adaptiv-value("padding-left", 80, 30, 0);
     @include adaptiv-value("padding-top", 128, 16, 0);
-    @include adaptiv-value("height", 548, 0, 0);
+    @include adaptiv-value("height", 548, 350, 0);
   }
 
   &__tittle {
@@ -412,28 +411,34 @@
     @include adaptiv-value("line-height", 48, 22, 0);
     @include adaptiv-value("letter-spacing", -2, 0, 0);
     @include adaptiv-value("padding-bottom", 48, 14, 0);
+    text-align: center;
   }
 
   &__list {
     display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(auto, 296px));
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
     @include adaptiv-value("grid-gap", 32, 2, 0);
-    // flex-direction: row;
   }
 
   &__item {
     flex-basis: calc(33.33% - 16px);
     justify-content: space-between;
-    @include adaptiv-value("width", 296, 150, 0);
-    @include adaptiv-value("height", 324, 170, 0);
-    @include adaptiv-value("padding", 40, 30, 0);
+    @include adaptiv-value("padding-top", 40, 10, 0);
+    @include adaptiv-value("padding-bottom", 40, 10, 0);
+    @include adaptiv-value("padding-left", 28, 5, 0);
+    @include adaptiv-value("padding-right", 28, 5, 0);
     text-align: center;
-    // width: 296px;
-    // height: 324px;
-    img{
-      width: 100%;
-      height: 100%;
+    background: rgb(244, 244, 244);
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(251, 246, 234);
+    }
+
+    img {
+      @include adaptiv-value("width", 128, 70, 0);
+      @include adaptiv-value("height", 128, 70, 0);
+      @include adaptiv-value("padding-bottom", 20, 5, 0);
       object-fit: contain;
     }
 
@@ -443,22 +448,238 @@
       @include adaptiv-value("font-size", 28, 10, 0);
       @include adaptiv-value("line-height", 40, 14, 0);
       @include adaptiv-value("letter-spacing", -1, 0, 0);
-      // font-size: 28px;
-      // line-height: 40px;
-      // letter-spacing: -1px;
+
+      @media (min-width: 2000px) {
+        font-size: 26px;
+        line-height: 35px;
+      }
     }
 
     p {
       font-weight: 400;
       @include adaptiv-value("font-size", 14, 8, 0);
       @include adaptiv-value("line-height", 20, 14, 0);
-      // font-size: 14px;
-      // line-height: 20px;
+      @include adaptiv-value("padding-bottom", 20, 5, 0);
       text-align: center;
       color: #6d6e76;
     }
   }
 
   &__social {
+    img {
+      @include adaptiv-value("width", 30, 14, 0);
+      @include adaptiv-value("height", 35, 16, 0);
+      object-fit: contain;
+
+      &:hover {
+        // @include adaptiv-value("width", 32, 12, 0);
+        // @include adaptiv-value("height", 37, 14.5, 0);
+        transform: translateY(-5px);
+        transition: transform 500ms;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+// ================================
+.featured-in {
+  &__container {
+    display: flex;
+    // display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+    color: #232536;
+    background-color: #ffffff;
+    @include adaptiv-value("padding-left", 80, 30, 0);
+    @include adaptiv-value("padding-top", 96, 0, 0);
+    @include adaptiv-value("height", 148, 195, 0);
+    // height: 148px;
+
+    @media (max-width: 475px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+    }
+  }
+
+  &__tittle {
+    font-weight: 400;
+    @include adaptiv-value("font-size", 14, 10, 0);
+    @include adaptiv-value("line-height", 20, 14, 0);
+    @include adaptiv-value("width", 136, 100, 0);
+    @include adaptiv-value("height", 32, 30, 0);
+    // width: 136px;
+    text-align: center;
+    color: #6d6e76;
+    opacity: 0.6;
+
+    span {
+      /* Featured in */
+      font-family: "Sen";
+      font-weight: 400;
+      @include adaptiv-value("font-size", 24, 12, 0);
+      @include adaptiv-value("line-height", 32, 14, 0);
+      // font-size: 24px;
+      // line-height: 32px;
+      color: #6d6e76;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__link {
+    display: flex;
+    @include adaptiv-value("margin-left", 102, 102, 0);
+    // margin-left: 102px;
+    @include adaptiv-value("width", 136, 120, 0);
+
+    img {
+      @include adaptiv-value("width", 136, 120, 0);
+      @include adaptiv-value("height", 32, 20, 0);
+      color: #6d6e76;
+    }
+  }
+}
+
+// ================================
+.testimonial {
+  &__container {
+    display: flex;
+    color: #232536;
+    background-color: #ffffff;
+
+    @include adaptiv-value("padding-left", 80, 30, 0);
+    @include adaptiv-value("padding-top", 104, 0, 0);
+    @include adaptiv-value("height", 568, 0, 0);
+    height: 568px;
+  }
+
+  &__left {
+    background: rgb(251, 246, 234);
+    border-right: 1px solid rgb(109, 110, 118, 0.1);
+    @include adaptiv-value("width", 581.5, 0, 0);
+    @include adaptiv-value("height", 464, 0, 0);
+    @include adaptiv-value("padding-left", 112, 0, 0);
+    @include adaptiv-value("padding-right", 70, 0, 0);
+    @include adaptiv-value("padding-top", 92, 0, 0);
+    width: 581.5px;
+    height: 464px;
+    padding-left: 112px;
+    padding-right: 70px;
+    padding-top: 92px;
+
+    h4 {
+      font-weight: 600;
+      @include adaptiv-value("font-size", 16, 0, 0);
+      @include adaptiv-value("line-height", 20, 0, 0);
+      @include adaptiv-value("letter-spacing", 3, 0, 0);
+      @include adaptiv-value("padding-bottom", 12, 0, 0);
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding-bottom: 12px;
+    }
+
+    h3 {
+      font-family: "Sen";
+      font-weight: 700;
+      @include adaptiv-value("font-size", 36, 0, 0);
+      @include adaptiv-value("line-height", 48, 0, 0);
+      @include adaptiv-value("letter-spacing", -2, 0, 0);
+      @include adaptiv-value("padding-bottom", 16, 0, 0);
+      font-size: 36px;
+      line-height: 48px;
+      letter-spacing: -2px;
+      padding-bottom: 16px;
+    }
+
+    p {
+      font-weight: 400;
+      @include adaptiv-value("font-size", 16, 0, 0);
+      @include adaptiv-value("line-height", 28, 0, 0);
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+
+  &__right {
+    background: rgb(251, 246, 234);
+    @include adaptiv-value("width", 778.5, 0, 0);
+    @include adaptiv-value("height", 464, 0, 0);
+    @include adaptiv-value("padding-left", 112, 0, 0);
+    @include adaptiv-value("padding-right", 170, 0, 0);
+    @include adaptiv-value("padding-top", 80, 0, 0);
+    width: 778.5px;
+    height: 464px;
+    padding-left: 112px;
+    padding-right: 170px;
+    padding-top: 80px;
+    p {
+      font-family: "Sen";
+      font-weight: 700;
+      @include adaptiv-value("font-size", 24, 0, 0);
+      @include adaptiv-value("line-height", 32, 0, 0);
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-evenly;
+    @include adaptiv-value("padding-top", 121, 0, 0);
+    padding-top: 121px;
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h4 {
+      font-family: "Sen";
+      font-weight: 700;
+      @include adaptiv-value("font-size", 24, 0, 0);
+      @include adaptiv-value("line-height", 32, 0, 0);
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    p {
+      font-weight: 400;
+      @include adaptiv-value("font-size", 16, 0, 0);
+      @include adaptiv-value("line-height", 28, 0, 0);
+      font-size: 16px;
+      line-height: 28px;
+      color: #6d6e76;
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    align-self: last baseline;
+
+    img {
+      @include adaptiv-value("width", 48, 0, 0);
+      @include adaptiv-value("height", 48, 0, 0);
+      @include adaptiv-value("margin-right", 20, 0, 0);
+      width: 48px;
+      height: 48px;
+      margin-right: 20px;
+      &:hover {
+        cursor: pointer;
+        transform: scale3d(1.5, 1.5, 0.3);
+        transition: transform 200ms;
+      }
+    }
   }
 }

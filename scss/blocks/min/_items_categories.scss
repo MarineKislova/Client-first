@@ -1,22 +1,22 @@
 .category {
-//   &__container {
-//     display: flex;
-//     flex-direction: column;
-//     background-color: #ffffff;
-//     @include adaptiv-value("padding-top", 127, 15, 0);
-//     @include adaptiv-value("padding-left", 80, 30, 0);
-//     color: rgb(35, 37, 54);
-//   }
+  //   &__container {
+  //     display: flex;
+  //     flex-direction: column;
+  //     background-color: #ffffff;
+  //     @include adaptiv-value("padding-top", 127, 15, 0);
+  //     @include adaptiv-value("padding-left", 80, 30, 0);
+  //     color: rgb(35, 37, 54);
+  //   }
 
-//   &__tittle {
-//     font-family: "Sen";
-//     font-weight: 700;
-//     @include adaptiv-value("font-size", 36, 18, 0);
-//     @include adaptiv-value("line-height", 48, 22, 0);
-//     @include adaptiv-value("letter-spacing", -2, 0, 0);
-//     @include adaptiv-value("padding-bottom", 48, 4, 0);
-//     text-align: center;
-//   }
+  //   &__tittle {
+  //     font-family: "Sen";
+  //     font-weight: 700;
+  //     @include adaptiv-value("font-size", 36, 18, 0);
+  //     @include adaptiv-value("line-height", 48, 22, 0);
+  //     @include adaptiv-value("letter-spacing", -2, 0, 0);
+  //     @include adaptiv-value("padding-bottom", 48, 4, 0);
+  //     text-align: center;
+  //   }
 
   &__list {
     display: grid;
@@ -34,7 +34,8 @@
     &:hover {
       background: rgb(255, 208, 80);
       border: 1px solid rgb(255, 208, 80, 0.3);
-      transition: 1s;
+      transform: translateY(-5px);
+      transition: transform 800ms, background 1s;
     }
 
     img {
