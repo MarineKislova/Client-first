@@ -1,0 +1,73 @@
+.join-team {
+  &__container {
+    display: flex;
+    // align-content: center;
+    // align-self: center;
+    justify-content: center;
+    color: #232536;
+    background-color: #ffffff;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include adaptiv-value("width", 414, 310, 0);
+    @include adaptiv-value("height", 256, 200, 0);
+    // width: 414px;
+    // height: 256px;
+
+    h3 {
+      font-family: "Sen";
+      font-weight: 700;
+      @include adaptiv-value("font-size", 36, 18, 0);
+      @include adaptiv-value("line-height", 48, 24, 0);
+      @include adaptiv-value("letter-spacing", -2, 0, 0);
+      @include adaptiv-value("padding-bottom", 16, 10, 0);
+      //   font-size: 36px;
+      //   line-height: 48px;
+      //   letter-spacing: -2px;
+      //   padding-bottom: 16px;
+      text-align: center;
+    }
+    p {
+      font-weight: 400;
+      @include adaptiv-value("font-size", 16, 12, 0);
+      @include adaptiv-value("line-height", 28, 20, 0);
+      @include adaptiv-value("padding-bottom", 16, 10, 0);
+      //   font-size: 16px;
+      //   line-height: 28px;
+      //   padding-bottom: 16px;
+      text-align: center;
+      color: #6d6e76;
+    }
+  }
+}
+.btn-join {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include adaptiv-value("padding-top", 16, 8, 0);
+  @include adaptiv-value("padding-bottom", 16, 8, 0);
+  @include adaptiv-value("padding-left", 48, 20, 0);
+  @include adaptiv-value("padding-right", 48, 20, 0);
+  //   padding: 16px 48px;
+  gap: 12px;
+  @include adaptiv-value("width", 174, 102, 0);
+  @include adaptiv-value("height", 56, 40, 0);
+  //   width: 174px;
+  //   height: 56px;
+  background: #ffd050;
+  font-family: "Sen";
+  font-weight: 700;
+  @include adaptiv-value("font-size", 18, 14, 0);
+  @include adaptiv-value("line-height", 24, 20, 0);
+  //   font-size: 18px;
+  //   line-height: 24px;
+  display: flex;
+  align-items: center;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}

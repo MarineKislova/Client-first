@@ -4,7 +4,7 @@
   //     flex-direction: column;
   //     background-color: #ffffff;
   //     @include adaptiv-value("padding-top", 127, 15, 0);
-  //     @include adaptiv-value("padding-left", 80, 30, 0);
+  // @include adaptiv-value("padding-left", 170, 30, 0);
   //     color: rgb(35, 37, 54);
   //   }
 
@@ -20,7 +20,7 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(273px, 296px));
     @include adaptiv-value("grid-gap", 32, 2, 0);
   }
 
@@ -28,14 +28,14 @@
     box-sizing: border-box;
     border: 1px solid rgb(109, 110, 118, 0.1);
 
-    flex-basis: calc(33.33% - 16px);
+    // flex-basis: calc(33.33% - 16px);
     justify-content: space-around;
     @include adaptiv-value("padding", 32, 10, 0);
     &:hover {
-      background: rgb(255, 208, 80);
+      background-color: rgb(255, 208, 80);
       border: 1px solid rgb(255, 208, 80, 0.3);
       transform: translateY(-5px);
-      transition: transform 800ms, background 1s;
+      transition: transform 800ms, background-color 1s;
     }
 
     img {
