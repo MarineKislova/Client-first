@@ -8,10 +8,9 @@
     background: #232536;
     color: #ffffff;
 
-    @include adaptiv-value("margin-top", 10, 2, 0);
     @include adaptiv-value("height", 80, 40, 0);
     @include adaptiv-value("padding-left", 80, 10, 0);
-
+    max-height: 80px;
     @media (max-width: 425px) {
       height: 57px;
     }

@@ -9,7 +9,9 @@
 .content {
   // @include adaptiv-value("padding-left", 80, 30, 0);
   // @include adaptiv-value("padding-right", 80, 30, 0);
-  height: 5996px;
+  // height: 5996px;
+  @include adaptiv-value("margin-top", 10, 2, 0);
+  @include adaptiv-value("margin-bottom", 10, 2, 0);
 }
 
 // ================================
@@ -19,11 +21,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     color: #ffffff;
-    @include adaptiv-value("height", 720, 220, 0);
-    @include adaptiv-value("padding-top", 208, 10, 0);
+    // @include adaptiv-value("height", 720, 220, 0);
+    @include adaptiv-value("padding-top", 208, 15, 0);
     @include adaptiv-value("padding-left", 80, 15, 0);
-    // @include adaptiv-value("padding-right", 80, 15, 0);
-
+    @include adaptiv-value("padding-bottom", 192, 10, 0);
+    max-height: 720px;
     @media (min-width: 2000px) {
       padding-top: 108px;
       height: 650px;
@@ -72,10 +74,8 @@
   &__container {
     @include adaptiv-value("padding-top", 128, 25, 0);
     @include adaptiv-value("padding-left", 80, 15, 0);
-    // @include adaptiv-value("padding-right", 80, 15, 0);
-    // @include adaptiv-value("padding-bottom", 15, 0, 0);
-    @include adaptiv-value("height", 932, 390, 0);
-    // height: 932px;
+    @include adaptiv-value("padding-bottom", 152, 5, 0);
+    max-height: 956px;
     display: flex;
     justify-content: space-around;
     @include adaptiv-value("gap", 32, 5, 0);
@@ -225,19 +225,20 @@
     display: flex;
     justify-content: space-evenly;
     margin: 0 auto;
-    background-color: #ffffff;
+    /* Lavender */
+    background: rgb(244, 240, 248);
     color: #232536;
-    @include adaptiv-value("height", 528, 350, 0);
-    // height: 500px;
+    // @include adaptiv-value("height", 528, 350, 0);
+    max-height: 500px;
     justify-content: space-evenly;
     background-image: url(../img/about_us/Group_9200.png);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: contain;
-    @include adaptiv-value("padding-top", 128, 44, 0);
+    @include adaptiv-value("padding-top", 98, 24, 0);
     @include adaptiv-value("padding-left", 80, 15, 0);
     @include adaptiv-value("padding-right", 80, 15, 0);
-    // @include adaptiv-value("padding-bottom", 36, 0, 0);
+    @include adaptiv-value("padding-bottom", 36, 10, 0);
     @include adaptiv-value("gap", 22, 10, 0);
   }
 
@@ -318,6 +319,7 @@
     // @include adaptiv-value("padding-right", 97, 30, 0);
     color: rgb(35, 37, 54);
     // height: 452px;
+    max-height: 324px;
   }
 
   &__tittle {
@@ -514,12 +516,12 @@
   &__left {
     background: rgb(251, 246, 234);
     border-right: 1px solid rgb(109, 110, 118, 0.1);
-    // @include adaptiv-value("width", 581.5, 160, 0);
+    @include adaptiv-value("width", 581.5, 160, 0);
     @include adaptiv-value("height", 464, 370, 0);
     @include adaptiv-value("padding-left", 112, 10, 0);
     @include adaptiv-value("padding-right", 70, 10, 0);
     @include adaptiv-value("padding-top", 92, 30, 0);
-    width: 581.5px;
+    // width: 581.5px;
     // height: 464px;
     // padding-left: 112px;
     // padding-right: 70px;
@@ -564,12 +566,12 @@
 
   &__right {
     background: rgb(251, 246, 234);
-    // @include adaptiv-value("width", 778.5, 160, 0);
+    @include adaptiv-value("width", 778.5, 160, 0);
     @include adaptiv-value("height", 464, 370, 0);
     @include adaptiv-value("padding-left", 112, 10, 0);
     @include adaptiv-value("padding-right", 170, 10, 0);
-    @include adaptiv-value("padding-top", 80, 30, 0);
-    width: 778.5px;
+    @include adaptiv-value("padding-top", 80, 25, 0);
+    // width: 778.5px;
     // height: 464px;
     // padding-left: 112px;
     // padding-right: 170px;
@@ -588,7 +590,7 @@
   &__bottom {
     display: flex;
 
-    @include adaptiv-value("padding-top", 121, 50, 0);
+    @include adaptiv-value("padding-top", 121, 20, 0);
     // padding-top: 121px;
 
     @media (max-width: 768px) {
@@ -607,8 +609,8 @@
     h4 {
       font-family: "Sen";
       font-weight: 700;
-      @include adaptiv-value("font-size", 24, 16, 0);
-      @include adaptiv-value("line-height", 32, 24, 0);
+      @include adaptiv-value("font-size", 24, 14, 0);
+      @include adaptiv-value("line-height", 32, 22, 0);
       text-align: center;
       // font-size: 24px;
       // line-height: 32px;
@@ -630,10 +632,10 @@
     // align-self: baseline;
 
     img {
-      @include adaptiv-value("width", 48, 30, 0);
-      @include adaptiv-value("height", 48, 30, 0);
+      @include adaptiv-value("width", 48, 25, 0);
+      @include adaptiv-value("height", 48, 25, 0);
       @include adaptiv-value("margin-right", 20, 0, 0);
-      @include adaptiv-value("margin-top", 0, 40, 0);
+      @include adaptiv-value("margin-top", 0, 20, 0);
       // width: 48px;
       // height: 48px;
       margin-right: 20px;
