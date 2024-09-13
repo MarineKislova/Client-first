@@ -6,14 +6,9 @@
     color: #ffffff;
     @include adaptiv-value("padding-left", 80, 15, 0);
     @include adaptiv-value("padding-top", 59, 15, 0);
+    @include adaptiv-value("padding-bottom", 56, 12, 0);
     @include adaptiv-value("font-size", 59, 26, 0);
     @include adaptiv-value("line-height", 56, 13, 0);
-    // padding-top: 59px;
-    // padding-bottom: 56px;
-
-    // @media (max-width:) {
-      
-    // }
   }
 
   &__menu {

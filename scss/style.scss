@@ -14,7 +14,7 @@
   flex: 1 1 auto;
 }
 
-body{
+body {
   background-color: #706666;
   // background-color: #ffffff;
 }
@@ -112,3 +112,4 @@ $responsiveType: 2;
 }
 
 @import "blocks/index";
+@import "blocks/blog";

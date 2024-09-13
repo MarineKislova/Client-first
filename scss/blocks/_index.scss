@@ -9,9 +9,10 @@
 .content {
   // @include adaptiv-value("padding-left", 80, 30, 0);
   // @include adaptiv-value("padding-right", 80, 30, 0);
-  // height: 5996px;
+  height: 5996px;
   @include adaptiv-value("margin-top", 10, 2, 0);
   @include adaptiv-value("margin-bottom", 10, 2, 0);
+  // max-height: max-content;
 }
 
 // ================================
@@ -187,6 +188,7 @@
   }
 
   &__side-articles {
+    cursor: pointer;
     @include adaptiv-value("padding-top", 32, 8, 0);
     p {
       font-weight: 500;
@@ -215,6 +217,11 @@
       &:last-child {
         padding-bottom: 0px;
       }
+    }
+
+    &:hover {
+      background-color: rgb(251, 246, 234);
+      transition: background-color 450ms ease-in;
     }
   }
 }
@@ -313,13 +320,13 @@
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
-    @include adaptiv-value("padding-top", 128, 15, 0);
+    @include adaptiv-value("padding-top", 128, 5, 0);
     @include adaptiv-value("padding-left", 80, 15, 0);
     // width: 1280px;
     // @include adaptiv-value("padding-right", 97, 30, 0);
     color: rgb(35, 37, 54);
     // height: 452px;
-    max-height: 324px;
+    max-height: 469px;
   }
 
   &__tittle {
@@ -336,46 +343,54 @@
 // ================================
 .special-post {
   &__container {
-    display: flex;
-    flex-direction: row;
-    // align-content: center;
-    justify-content: baseline;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+
     color: #232536;
     background-color: #ffffff;
     @include adaptiv-value("padding-left", 80, 15, 0);
     // @include adaptiv-value("padding-right", 80, 0, 0);
     @include adaptiv-value("padding-top", 128, 16, 0);
-    @include adaptiv-value("height", 833, 330, 0);
+    // @include adaptiv-value("height", 833, 330, 0);
     // height: 705px;
+
+    max-height: 833px;
   }
 
   &__left {
-    position: absolute;
+    grid-column: 1 / span 9;
+    grid-row: 1;
     @include adaptiv-value("width", 949, 250, 0);
-    @include adaptiv-value("height", 705, 150, 0);
-  }
-
-  &__img {
+    // @include adaptiv-value("height", 705, 150, 0);
+    // max-width: 949px;
+    // max-height: 705px;
     img {
       width: 100%;
-      // height: 100%;
+      height: 100%;
       object-fit: cover;
+      object-position: center;
     }
   }
 
   &__right {
-    position: relative;
-    @include adaptiv-value("top", 21, 12, 0);
-    @include adaptiv-value("left", 574, 120, 0);
+    grid-column: 7 span / -1;
+    grid-row: 1;
+    margin-top: 8.3%;
+    z-index: 1;
+
+    // @include adaptiv-value("top", 121, 12, 0);
+    // @include adaptiv-value("left", 574, 110, 0);
     background-color: #ffffff;
-    @include adaptiv-value("width", 706, 200, 0);
+    @include adaptiv-value("width", 706, 145, 0);
     @include adaptiv-value("height", 584, 250, 0);
+    // max-height: 584px;
 
     // height: 584px;
     // @include adaptiv-value("padding", 80, 15, 0);
-    @include adaptiv-value("padding-top", 80, 15, 0);
-    @include adaptiv-value("padding-left", 80, 15, 0);
-    @include adaptiv-value("padding-right", 80, 15, 0);
+    @include adaptiv-value("padding-top", 80, 5, 0);
+    @include adaptiv-value("padding-left", 80, 5, 0);
+    @include adaptiv-value("padding-right", 80, 5, 0);
     box-sizing: border-box;
     border: 1px solid rgb(109, 110, 118, 0.1);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
@@ -418,7 +433,8 @@
     background-color: #ffffff;
     @include adaptiv-value("padding-left", 80, 15, 0);
     @include adaptiv-value("padding-top", 128, 16, 0);
-    @include adaptiv-value("height", 548, 350, 0);
+    // @include adaptiv-value("height", 548, 350, 0);
+    max-height: 548px;
   }
 
   &__tittle {
@@ -441,7 +457,9 @@
     background-color: #ffffff;
     @include adaptiv-value("padding-left", 80, 15, 0);
     @include adaptiv-value("padding-top", 96, 0, 0);
-    @include adaptiv-value("height", 52, 162, 0);
+    // @include adaptiv-value("height", 52, 162, 0);
+
+    max-height: 148px;
 
     // @media (max-width:600) {
     //   height: 548px;
@@ -508,24 +526,22 @@
     background-color: #ffffff;
 
     @include adaptiv-value("padding-left", 80, 15, 0);
-    @include adaptiv-value("padding-top", 104, 0, 0);
-    @include adaptiv-value("height", 568, 400, 0);
+    @include adaptiv-value("padding-top", 104, 20, 0);
+    // @include adaptiv-value("height", 568, 400, 0);
+
+    max-height: 556px;
     // height: 568px;
   }
 
   &__left {
     background: rgb(251, 246, 234);
     border-right: 1px solid rgb(109, 110, 118, 0.1);
-    @include adaptiv-value("width", 581.5, 160, 0);
+    // @include adaptiv-value("width", 581.5, 160, 0);
+    max-width: 581.5px;
     @include adaptiv-value("height", 464, 370, 0);
     @include adaptiv-value("padding-left", 112, 10, 0);
     @include adaptiv-value("padding-right", 70, 10, 0);
     @include adaptiv-value("padding-top", 92, 30, 0);
-    // width: 581.5px;
-    // height: 464px;
-    // padding-left: 112px;
-    // padding-right: 70px;
-    // padding-top: 92px;
 
     h4 {
       font-weight: 600;
@@ -566,7 +582,8 @@
 
   &__right {
     background: rgb(251, 246, 234);
-    @include adaptiv-value("width", 778.5, 160, 0);
+    // @include adaptiv-value("width", 778.5, 160, 0);
+    max-width: 778.5px;
     @include adaptiv-value("height", 464, 370, 0);
     @include adaptiv-value("padding-left", 112, 10, 0);
     @include adaptiv-value("padding-right", 170, 10, 0);
