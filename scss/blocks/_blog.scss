@@ -78,27 +78,32 @@
   &__tittle {
     font-family: "Sen";
     font-weight: 700;
-    font-size: 48px;
-    line-height: 64px;
-    letter-spacing: -2px;
+    @include adaptiv-value("font-size", 48, 28, 0);
+    @include adaptiv-value("line-height", 64, 34, 0);
+    @include adaptiv-value("letter-spacing", -2, 0, 0);
+    // font-size: 48px;
+    // line-height: 64px;
+    // letter-spacing: -2px;
   }
 
   &__posts {
     display: flex;
     flex-direction: column;
     gap: 64px;
-    @include adaptiv-value("padding-top", 64, 15, 0);
+    @include adaptiv-value("gap", 64, 15, 0);
   }
 
   &__item {
     display: flex;
-    gap: 32px;
+    @include adaptiv-value("gap", 32, 8, 0);
+    // gap: 32px;
     min-width: 1146px;
     max-height: 318px;
   }
 
   &__item-img {
-    max-width: 490px;
+    @include adaptiv-value("width", 490, 150, 0);
+    // width: 490px;
     max-height: 318px;
     // object-fit: cover;
     // border-radius: 10px;
@@ -111,35 +116,43 @@
   }
 
   &__item-body {
-    width: 624px;
-    height: 204px;
-    padding-top: 55px;
-    padding-bottom: 55px;
+    @include adaptiv-value("width", 624, 125, 0);
+    // width: 624px;
+    max-height: 204px;
+    @include adaptiv-value("padding-top", 55, 0, 0);
+    @include adaptiv-value("padding-bottom", 55, 0, 0);
+    // padding-top: 55px;
+    // padding-bottom: 55px;
 
     h4 {
       font-weight: 600;
       @include adaptiv-value("font-size", 16, 10, 0);
       @include adaptiv-value("line-height", 20, 14, 0);
       @include adaptiv-value("letter-spacing", 3, 0, 0);
-      font-size: 16px;
-      line-height: 20px;
-      letter-spacing: 3px;
+      // font-size: 16px;
+      // line-height: 20px;
+      // letter-spacing: 3px;
       text-transform: uppercase;
       color: #592ea9;
+      cursor: pointer;
     }
     h3 {
       font-family: "Sen";
       font-weight: 700;
-      font-size: 36px;
-      line-height: 48px;
-      letter-spacing: -2px;
+      @include adaptiv-value("font-size", 36, 12, 0);
+      @include adaptiv-value("line-height", 48, 18, 0);
+      @include adaptiv-value("letter-spacing", -2, -1, 0);
+      // font-size: 36px;
+      // line-height: 48px;
+      // letter-spacing: -2px;
+      cursor: pointer;
     }
     p {
       font-weight: 400;
       @include adaptiv-value("font-size", 16, 8, 0);
       @include adaptiv-value("line-height", 28, 14, 0);
-      font-size: 16px;
-      line-height: 28px;
+      // font-size: 16px;
+      // line-height: 28px;
       color: #6d6e76;
     }
   }
@@ -147,27 +160,64 @@
   &__pagination {
     font-family: "Sen";
     font-weight: 700;
-    font-size: 24px;
-    line-height: 32px;
-    padding-top: 64px;
+    @include adaptiv-value("font-size", 24, 10, 0);
+    @include adaptiv-value("line-height", 32, 18, 0);
+    // font-size: 24px;
+    // line-height: 32px;
+    @include adaptiv-value("padding-top", 64, 20, 0);
+    // padding-top: 64px;
     display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
     color: #6d6e76;
+    a {
+      &:last-child {
+        padding-left: 17px;
+      }
 
-    &:hover {
-      font-family: "Sen";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 28px;
-      line-height: 40px;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      letter-spacing: -1px;
-      color: #232536;
+      &:hover {
+        font-family: "Sen";
+        font-style: normal;
+        font-weight: 700;
+        @include adaptiv-value("font-size", 28, 12, 0);
+        @include adaptiv-value("line-height", 40, 20, 0);
+        @include adaptiv-value("letter-spacing", -1, 0, 0);
+        // font-size: 28px;
+        // line-height: 40px;
+        // letter-spacing: -1px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #232536;
+      }
     }
   }
 }
 .active {
+}
+
+.category {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    @include adaptiv-value("padding-top", 128, 5, 0);
+    @include adaptiv-value("padding-left", 80, 15, 0);
+    // width: 1280px;
+    // @include adaptiv-value("padding-right", 97, 30, 0);
+    color: rgb(35, 37, 54);
+    // height: 452px;
+    max-height: 519px;
+  }
+
+  &__tittle {
+    font-family: "Sen";
+    font-weight: 700;
+    @include adaptiv-value("font-size", 36, 18, 0);
+    @include adaptiv-value("line-height", 48, 22, 0);
+    @include adaptiv-value("letter-spacing", -2, 0, 0);
+    @include adaptiv-value("padding-bottom", 48, 4, 0);
+    text-align: center;
+  }
 }

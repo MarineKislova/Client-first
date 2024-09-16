@@ -1,0 +1,236 @@
+@import "min/nav";
+@import "min/buttons";
+@import "min/items_categories";
+@import "min/authors";
+@import "min/join-team";
+@import "min/footer";
+
+.stepbystep {
+  &__container {
+    @include adaptiv-value("padding-left", 80, 15, 0);
+    background-color: #ffffff;
+    color: #232536;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    @include adaptiv-value("width", 768, 300, 0);
+    // width: 768px;
+    max-height: 410px;
+    @include adaptiv-value("padding-top", 128, 5, 0);
+    // padding-top: 128px;
+  }
+
+  &__author {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__author-img {
+    @include adaptiv-value("width", 48, 30, 0);
+    @include adaptiv-value("height", 48, 0, 0);
+    // width: 48px;
+    height: 48px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__author-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__author-name {
+    font-family: "Sen";
+    font-weight: 700;
+    @include adaptiv-value("font-size", 28, 14, 0);
+    @include adaptiv-value("line-height", 40, 20, 0);
+    @include adaptiv-value("letter-spacing", -1, 0, 0);
+    // font-size: 28px;
+    // line-height: 40px;
+    // letter-spacing: -1px;
+    color: #592ea9;
+    opacity: 0.87;
+  }
+
+  &__author-date {
+    font-weight: 400;
+    @include adaptiv-value("font-size", 16, 12, 0);
+    @include adaptiv-value("line-height", 28, 18, 0);
+    // font-size: 16px;
+    // line-height: 28px;
+    color: #6d6e76;
+  }
+
+  &__tittle {
+    h1 {
+      font-family: "Sen";
+      font-weight: 700;
+      @include adaptiv-value("font-size", 48, 22, 0);
+      @include adaptiv-value("line-height", 64, 30, 0);
+      @include adaptiv-value("letter-spacing", -2, 0, 0);
+      // font-size: 48px;
+      // line-height: 64px;
+      // letter-spacing: -2px;
+    }
+
+    h3 {
+      font-family: "Sen";
+      font-weight: 700;
+      @include adaptiv-value("font-size", 24, 14, 0);
+      @include adaptiv-value("line-height", 32, 20, 0);
+      @include adaptiv-value("padding-top", 34, 10, 0);
+      // font-size: 24px;
+      // line-height: 32px;
+      // padding-top: 34px;
+      // padding-left: 30px;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        justify-content: space-between;
+        @include adaptiv-value("width", 24, 10, 0);
+        @include adaptiv-value("height", 24, 10, 0);
+        @include adaptiv-value("margin-right", 8, 2, 0);
+        // width: 24px;
+        // height: 24px;
+        // margin-right: 8px;
+        background-color: #fff;
+        background: url(../icons/startup_shuttle.svg) no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  &__image {
+    max-height: 646px;
+    @include adaptiv-value("padding-top", 64, 25, 0);
+    // padding-top: 64px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    @include adaptiv-value("width", 843, 280, 0);
+    @include adaptiv-value("padding-top", 16, 2, 0);
+    // width: 843px;
+    max-height: 1298px;
+    text-align: justify;
+    // padding-top: 16px;
+  }
+
+  &__content-text {
+    h4 {
+      font-family: "Sen";
+      font-weight: 700;
+      @include adaptiv-value("font-size", 36, 16, 0);
+      @include adaptiv-value("line-height", 48, 22, 0);
+      @include adaptiv-value("letter-spacing", -2, 0, 0);
+      @include adaptiv-value("padding-top", 48, 15, 0);
+      // font-size: 36px;
+      // line-height: 48px;
+      // letter-spacing: -2px;
+      color: #232536;
+      // padding-top: 48px;
+    }
+    p {
+      font-weight: 400;
+      @include adaptiv-value("font-size", 16, 12, 0);
+      @include adaptiv-value("line-height", 28, 18, 0);
+      @include adaptiv-value("padding-top", 24, 10, 0);
+      // font-size: 16px;
+      // line-height: 28px;
+      color: #6d6e76;
+      // padding-top: 24px;
+    }
+    ul li {
+      list-style: url(../icons/pointer.svg);
+      list-style-position: inside;
+      font-family: "Sen";
+      font-weight: 700;
+      @include adaptiv-value("font-size", 24, 12, 0);
+      @include adaptiv-value("line-height", 32, 14, 0);
+      @include adaptiv-value("padding-top", 24, 10, 0);
+      // font-size: 24px;
+      // line-height: 32px;
+      // padding-top: 24px;
+      color: #161722;
+      opacity: 0.78;
+    }
+  }
+}
+
+.whatnext {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    color: #232536;
+    background-color: #ffffff;
+    @include adaptiv-value("padding-left", 80, 15, 0);
+    @include adaptiv-value("padding-top", 128, 16, 0);
+    max-height: 910px;
+    // padding-top: 128px;
+  }
+
+  &__tittle {
+    font-family: "Sen";
+    font-weight: 700;
+    @include adaptiv-value("font-size", 36, 18, 0);
+    @include adaptiv-value("line-height", 48, 26, 0);
+    @include adaptiv-value("letter-spacing", -2, 0, 0);
+    // font-size: 36px;
+    // line-height: 48px;
+    text-align: center;
+    // letter-spacing: -2px;
+    color: #000000;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(minmax(300px, 496px));
+    // flex-direction: row;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    // padding: 48px 24px;
+    // gap: 24px;
+    @include adaptiv-value("padding-left", 64, 12, 0);
+    @include adaptiv-value("padding-right", 64, 12, 0);
+    @include adaptiv-value("padding-top", 24, 10, 0);
+    @include adaptiv-value("padding-bottom", 24, 10, 0);
+    // padding-left: 64px;
+    // padding-right: 64px;
+    // padding-top: 24px;
+    // padding-bottom: 24px;
+  }
+
+  &__item-img {
+    width: 405px;
+    height: 318px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__divider {
+  }
+}

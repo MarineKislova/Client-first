@@ -1,27 +1,32 @@
 .category {
-  //   &__container {
-  //     display: flex;
-  //     flex-direction: column;
-  //     background-color: #ffffff;
-  //     @include adaptiv-value("padding-top", 127, 15, 0);
-  // @include adaptiv-value("padding-left", 170, 30, 0);
-  //     color: rgb(35, 37, 54);
-  //   }
+  // &__container {
+  //   display: flex;
+  //   flex-direction: column;
+  //   background-color: #ffffff;
+  //   @include adaptiv-value("padding-top", 128, 5, 0);
+  //   @include adaptiv-value("padding-left", 80, 15, 0);
+  //   // width: 1280px;
+  //   // @include adaptiv-value("padding-right", 97, 30, 0);
+  //   color: rgb(35, 37, 54);
+  //   // height: 452px;
+  //   max-height: 469px;
+  // }
 
-  //   &__tittle {
-  //     font-family: "Sen";
-  //     font-weight: 700;
-  //     @include adaptiv-value("font-size", 36, 18, 0);
-  //     @include adaptiv-value("line-height", 48, 22, 0);
-  //     @include adaptiv-value("letter-spacing", -2, 0, 0);
-  //     @include adaptiv-value("padding-bottom", 48, 4, 0);
-  //     text-align: center;
-  //   }
+  // &__tittle {
+  //   font-family: "Sen";
+  //   font-weight: 700;
+  //   @include adaptiv-value("font-size", 36, 18, 0);
+  //   @include adaptiv-value("line-height", 48, 22, 0);
+  //   @include adaptiv-value("letter-spacing", -2, 0, 0);
+  //   @include adaptiv-value("padding-bottom", 48, 4, 0);
+  //   text-align: center;
+  // }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(273px, 296px));
     @include adaptiv-value("grid-gap", 32, 2, 0);
+    justify-content: space-around;
   }
 
   &__item {
