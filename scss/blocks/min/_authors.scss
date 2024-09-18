@@ -1,89 +1,94 @@
 .authors {
-    // &__container {
-    //   display: flex;
-    //   // display: none;
-    //   flex-direction: column;
-    //   color: #232536;
-    //   background-color: #ffffff;
-    //   @include adaptiv-value("padding-left", 80, 15, 0);
-    //   @include adaptiv-value("padding-top", 128, 16, 0);
-    //   @include adaptiv-value("height", 548, 350, 0);
+  &__container {
+    display: flex;
+    // display: none;
+    flex-direction: column;
+    color: #232536;
+    background-color: #ffffff;
+    @include adaptiv-value("padding-left", 80, 15, 0);
+    @include adaptiv-value("padding-top", 128, 16, 0);
+    max-height: 1248px;
+  }
+
+  &__tittle {
+    font-family: "Sen";
+    font-weight: 700;
+    @include adaptiv-value("font-size", 36, 12, 0);
+    @include adaptiv-value("line-height", 48, 22, 0);
+    @include adaptiv-value("letter-spacing", -2, 0, 0);
+    @include adaptiv-value("padding-bottom", 48, 14, 0);
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
+    @include adaptiv-value("grid-gap", 32, 2, 0);
+    justify-items: stretch;
+
+    // @media (max-width: 661px) {
+    //   align-self: center;
     // }
-  
-    // &__tittle {
-    //   font-family: "Sen";
-    //   font-weight: 700;
-    //   @include adaptiv-value("font-size", 36, 12, 0);
-    //   @include adaptiv-value("line-height", 48, 22, 0);
-    //   @include adaptiv-value("letter-spacing", -2, 0, 0);
-    //   @include adaptiv-value("padding-bottom", 48, 14, 0);
-    //   text-align: center;
-    // }
-  
-    &__list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
-      @include adaptiv-value("grid-gap", 32, 2, 0);
+  }
+
+  &__item {
+    // flex-basis: calc(33.33% - 16px);
+    justify-content: space-between;
+    @include adaptiv-value("padding-top", 40, 10, 0);
+    @include adaptiv-value("padding-bottom", 40, 10, 0);
+    @include adaptiv-value("padding-left", 28, 5, 0);
+    @include adaptiv-value("padding-right", 28, 5, 0);
+    text-align: center;
+    background: rgb(244, 244, 244);
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(251, 246, 234);
     }
-  
-    &__item {
-      flex-basis: calc(33.33% - 16px);
-      justify-content: space-between;
-      @include adaptiv-value("padding-top", 40, 10, 0);
-      @include adaptiv-value("padding-bottom", 40, 10, 0);
-      @include adaptiv-value("padding-left", 28, 5, 0);
-      @include adaptiv-value("padding-right", 28, 5, 0);
+
+    img {
+      @include adaptiv-value("width", 128, 70, 0);
+      @include adaptiv-value("height", 128, 70, 0);
+      @include adaptiv-value("padding-bottom", 20, 5, 0);
+      object-fit: contain;
+    }
+
+    h4 {
+      font-family: "Sen";
+      font-weight: 700;
+      @include adaptiv-value("font-size", 28, 10, 0);
+      @include adaptiv-value("line-height", 40, 14, 0);
+      @include adaptiv-value("letter-spacing", -1, 0, 0);
+
+      @media (min-width: 2000px) {
+        font-size: 26px;
+        line-height: 35px;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      @include adaptiv-value("font-size", 14, 8, 0);
+      @include adaptiv-value("line-height", 20, 14, 0);
+      @include adaptiv-value("padding-bottom", 20, 5, 0);
       text-align: center;
-      background: rgb(244, 244, 244);
-      cursor: pointer;
-  
-      &:hover {
-        background: rgb(251, 246, 234);
-      }
-  
-      img {
-        @include adaptiv-value("width", 128, 70, 0);
-        @include adaptiv-value("height", 128, 70, 0);
-        @include adaptiv-value("padding-bottom", 20, 5, 0);
-        object-fit: contain;
-      }
-  
-      h4 {
-        font-family: "Sen";
-        font-weight: 700;
-        @include adaptiv-value("font-size", 28, 10, 0);
-        @include adaptiv-value("line-height", 40, 14, 0);
-        @include adaptiv-value("letter-spacing", -1, 0, 0);
-  
-        @media (min-width: 2000px) {
-          font-size: 26px;
-          line-height: 35px;
-        }
-      }
-  
-      p {
-        font-weight: 400;
-        @include adaptiv-value("font-size", 14, 8, 0);
-        @include adaptiv-value("line-height", 20, 14, 0);
-        @include adaptiv-value("padding-bottom", 20, 5, 0);
-        text-align: center;
-        color: #6d6e76;
-      }
+      color: #6d6e76;
     }
-  
-    &__social {
-      img {
-        @include adaptiv-value("width", 30, 14, 0);
-        @include adaptiv-value("height", 35, 16, 0);
-        object-fit: contain;
-  
-        &:hover {
-          // @include adaptiv-value("width", 32, 12, 0);
-          // @include adaptiv-value("height", 37, 14.5, 0);
-          transform: translateY(-5px);
-          transition: transform 500ms;
-          opacity: 0.8;
-        }
+  }
+
+  &__social {
+    img {
+      @include adaptiv-value("width", 30, 14, 0);
+      @include adaptiv-value("height", 35, 16, 0);
+      object-fit: contain;
+
+      &:hover {
+        // @include adaptiv-value("width", 32, 12, 0);
+        // @include adaptiv-value("height", 37, 14.5, 0);
+        transform: translateY(-5px);
+        transition: transform 500ms;
+        opacity: 0.8;
       }
     }
   }
+}

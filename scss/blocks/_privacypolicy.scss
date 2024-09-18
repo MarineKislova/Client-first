@@ -1,0 +1,108 @@
+@import "min/nav";
+@import "min/buttons";
+@import "min/items_categories";
+@import "min/authors";
+@import "min/join-team";
+@import "min/footer";
+
+.privacy-header {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f0f8;
+    @include adaptiv-value("padding-top", 80, 15, 0);
+    @include adaptiv-value("padding-bottom", 80, 15, 0);
+    @include adaptiv-value("padding-left", 80, 15, 0);
+    color: rgb(35, 37, 54);
+    max-height: 336px;
+  }
+
+  &__tittle {
+    max-width: 302px;
+
+    h1 {
+      font-family: "Sen";
+      font-weight: 700;
+
+      @include adaptiv-value("font-size", 48, 30, 0);
+      @include adaptiv-value("line-height", 64, 40, 0);
+      @include adaptiv-value("letter-spacing", -2, 0, 0);
+      text-align: center;
+      padding-bottom: 4px;
+    }
+
+    p {
+      font-weight: 400;
+      @include adaptiv-value("font-size", 16, 0, 0);
+      @include adaptiv-value("line-height", 28, 0, 0);
+      font-size: 16px;
+      line-height: 28px;
+      text-align: center;
+      opacity: 0.6;
+    }
+  }
+}
+
+.privacy-content {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    @include adaptiv-value("padding-top", 128, 5, 0);
+    @include adaptiv-value("padding-bottom", 128, 5, 0);
+    @include adaptiv-value("padding-left", 80, 15, 0);
+    color: rgb(35, 37, 54);
+    max-height: 1788px;
+  }
+
+  &__body {
+    max-width: 768px;
+    // max-height: 1032px;
+
+    h2 {
+      font-family: "Sen";
+      font-weight: 700;
+      @include adaptiv-value("font-size", 48, 28, 0);
+      @include adaptiv-value("line-height", 64, 38, 0);
+      @include adaptiv-value("letter-spacing", -2, 0, 0);
+      @include adaptiv-value("padding-bottom", 32, 4, 0);
+    //   font-size: 48px;
+    //   line-height: 64px;
+    //   letter-spacing: -2px;
+    //   padding-bottom: 32px;
+    //   text-align: justify;
+    }
+
+    h3 {
+      font-family: "Sen";
+      font-weight: 700;
+      @include adaptiv-value("font-size", 36, 20, 0);
+      @include adaptiv-value("line-height",48, 27, 0);
+      @include adaptiv-value("letter-spacing", -2, 0, 0);
+      @include adaptiv-value("padding-bottom", 24, 6, 0);
+    //   font-size: 36px;
+    //   line-height: 48px;
+    //   letter-spacing: -2px;
+    //   padding-bottom: 24px;
+    //   text-align: justify;
+    }
+
+    p {
+      font-weight: 400;
+      @include adaptiv-value("font-size", 16, 13, 0);
+      @include adaptiv-value("line-height", 28, 20, 0);
+      @include adaptiv-value("padding-bottom", 32, 4, 0);
+    //   font-size: 16px;
+    //   line-height: 28px;
+      color: #4c4c4c;
+    //   padding-bottom: 32px;
+      text-align: justify;
+
+      &:last-child {
+        padding-bottom: 0px;
+      }
+    }
+  }
+}

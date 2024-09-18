@@ -79,7 +79,7 @@
 }
 
 .overview {
-  max-height: 444px;
+  max-height: 510px;
   position: relative;
   @include adaptiv-value("top", -63, -13, 0);
   //   top: -63px;
@@ -100,6 +100,7 @@
     @include adaptiv-value("padding-left", 80, 15, 0);
     color: rgb(35, 37, 54);
     @include adaptiv-value("padding-top", 128, 15, 0);
+    @include adaptiv-value("margin-top", -63, -13, 0);
     max-height: 569px;
   }
 
@@ -111,11 +112,8 @@
       @include adaptiv-value("line-height", 20, 16, 0);
       @include adaptiv-value("letter-spacing", 3, 0, 0);
       @include adaptiv-value("padding-bottom", 24, 14, 0);
-      //   font-size: 16px;
-      //   line-height: 20px;
-      //   letter-spacing: 3px;
       text-transform: uppercase;
-      //   padding-bottom: 24px;
+     
     }
     h3 {
       font-family: "Sen";
@@ -124,20 +122,15 @@
       @include adaptiv-value("letter-spacing", -1, 0, 0);
       @include adaptiv-value("padding-bottom", 16, 6, 0);
       font-weight: 700;
-      //   font-size: 28px;
-      //   line-height: 40px;
-      //   letter-spacing: -1px;
-      //   padding-bottom: 16px;
+      // text-align: justify;
     }
     p {
       font-weight: 400;
       @include adaptiv-value("font-size", 16, 12, 0);
       @include adaptiv-value("line-height", 28, 24, 0);
       @include adaptiv-value("padding-bottom", 64, 14, 0);
-      //   font-size: 16px;
-      //   line-height: 28px;
       color: #6d6e76;
-      //   padding-bottom: 64px;
+      // text-align: justify;
     }
   }
 
@@ -200,9 +193,6 @@
     @include adaptiv-value("padding-top", 82, 12, 0);
     @include adaptiv-value("padding-bottom", 82, 12, 0);
     @include adaptiv-value("padding-right", 80, 10, 0);
-    // padding-top: 82px;
-    // padding-bottom: 82px;
-    // padding-right: 80px;
     h4 {
       font-family: "Sen";
       font-weight: 700;
@@ -210,10 +200,6 @@
       @include adaptiv-value("line-height", 48, 30, 0);
       @include adaptiv-value("letter-spacing", -2, 0, 0);
       @include adaptiv-value("padding-bottom", 16, 10, 0);
-      //   font-size: 36px;
-      //   line-height: 48px;
-      //   letter-spacing: -2px;
-      //   padding-bottom: 16px;
     }
 
     h3 {
@@ -222,9 +208,7 @@
       @include adaptiv-value("font-size", 24, 14, 0);
       @include adaptiv-value("line-height", 32, 24, 0);
       @include adaptiv-value("padding-bottom", 16, 10, 0);
-      //   font-size: 24px;
-      //   line-height: 32px;
-      //   padding-bottom: 16px;
+      text-align: justify;
     }
 
     p {
@@ -232,16 +216,13 @@
       font-weight: 400;
       @include adaptiv-value("font-size", 16, 12, 0);
       @include adaptiv-value("line-height", 28, 24, 0);
-      //   font-size: 16px;
-      //   line-height: 28px;
+      text-align: justify;
     }
   }
 
   &__right {
     max-width: 681px;
-    // height: 480px;
     @include adaptiv-value("padding-left", 57, 10, 0);
-    // padding-left: 57px;
     img {
       width: 100%;
       height: 100%;
@@ -254,9 +235,14 @@
   &__container {
     display: flex;
     background-color: #ffffff;
-    @include adaptiv-value("padding-top", 128, 5, 0);
+    @include adaptiv-value("padding-top", 128, 15, 0);
     @include adaptiv-value("padding-left", 80, 15, 0);
     color: rgb(35, 37, 54);
+
+    @media (max-width: 950px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__left {
@@ -269,30 +255,33 @@
   }
 
   &__right {
-    padding-top: 82px;
-    padding-bottom: 82px;
-    padding-left: 64px;
+    @include adaptiv-value("padding-top", 82, 12, 0);
+    @include adaptiv-value("padding-bottom", 82, 12, 0);
+    @include adaptiv-value("padding-left", 64, 5, 0);
+
     h3 {
       font-family: "Sen";
       font-weight: 700;
       @include adaptiv-value("padding-bottom", 16, 10, 0);
-      font-size: 36px;
-      line-height: 48px;
-      letter-spacing: -2px;
+      @include adaptiv-value("font-size", 36, 18, 0);
+      @include adaptiv-value("line-height", 48, 28, 0);
+      @include adaptiv-value("letter-spacing", -2, 0, 0);
     }
 
     h4 {
       font-family: "Sen";
       font-weight: 700;
       @include adaptiv-value("padding-bottom", 16, 10, 0);
-      font-size: 24px;
-      line-height: 32px;
+      @include adaptiv-value("font-size", 24, 14, 0);
+      @include adaptiv-value("line-height", 32, 24, 0);
+      text-align: justify;
     }
 
     p {
       font-weight: 400;
-      font-size: 16px;
-      line-height: 28px;
+      @include adaptiv-value("font-size", 16, 12, 0);
+      @include adaptiv-value("line-height", 28, 24, 0);
+      text-align: justify;
     }
   }
 }
