@@ -1,0 +1,31 @@
+@import "min/nav";
+@import "min/buttons";
+@import "min/items_categories";
+@import "min/authors";
+@import "min/join-team";
+@import "min/footer";
+
+.author-header {
+  &__container {
+    display: flex;
+    @include adaptiv-value("padding-top", 128, 25, 0);
+    @include adaptiv-value("padding-bottom", 128, 25, 0);
+    @include adaptiv-value("padding-left", 80, 15, 0);
+    max-height: 806px;
+    background-color: #ffffff;
+    color: #232536;
+  }
+
+  &__img {
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__social {
+    display: flex;
+
+  }
+}

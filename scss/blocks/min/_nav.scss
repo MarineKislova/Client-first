@@ -68,7 +68,9 @@
 
 .btns {
   @include adaptiv-value("margin-top", 12, 12, 0);
-  @media (max-width: 425px) {
+  @include adaptiv-value("margin-left", 0, -30, 0);
+  @media (max-width: 425px)
+   {
     margin-top: 15px;
   }
 }
