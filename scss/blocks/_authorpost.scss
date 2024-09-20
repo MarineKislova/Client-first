@@ -8,24 +8,189 @@
 .author-header {
   &__container {
     display: flex;
+    flex-direction: column;
     @include adaptiv-value("padding-top", 128, 25, 0);
-    @include adaptiv-value("padding-bottom", 128, 25, 0);
-    @include adaptiv-value("padding-left", 80, 15, 0);
+    @include adaptiv-value("padding-left", 280, 15, 0);
     max-height: 806px;
     background-color: #ffffff;
     color: #232536;
   }
 
+  &__body {
+    display: flex;
+    @include adaptiv-value("column-gap", 32, 16, 0);
+    @include adaptiv-value("padding-bottom", 128, 25, 0);
+  }
+
   &__img {
+    // @include adaptiv-value("width", 251, 200, 0);
+    width: 251px;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
   }
 
   &__details {
     display: flex;
     flex-direction: column;
+    @include adaptiv-value("width", 669, 100, 0);
+    width: 669px;
+
+    h2 {
+      @include adaptiv-value("padding-bottom", 12, 6, 0);
+      font-family: "Sen";
+      font-weight: 700;
+      @include adaptiv-value("font-size", 48, 18, 0);
+      @include adaptiv-value("line-height", 64, 20, 0);
+      @include adaptiv-value("letter-spacing", -2, 0, 0);
+      display: flex;
+      align-items: center;
+    }
+
+    p {
+      @include adaptiv-value("padding-bottom", 25.59, 19.59, 0);
+      font-weight: 400;
+      @include adaptiv-value("font-size", 16, 13, 0);
+      @include adaptiv-value("line-height", 28, 19, 0);
+      display: flex;
+      align-items: center;
+      color: #6d6e76;
+    }
   }
 
   &__social {
     display: flex;
+    @include adaptiv-value("column-gap", 16, 0, 0);
+    column-gap: 16px;
 
+    img {
+      @include adaptiv-value("width", 30, 14, 0);
+      @include adaptiv-value("height", 35, 16, 0);
+      object-fit: contain;
+
+      &:hover {
+        // @include adaptiv-value("width", 32, 12, 0);
+        // @include adaptiv-value("height", 37, 14.5, 0);
+        transform: translateY(-5px);
+        transition: transform 500ms;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__pattern {
+    max-width: 1024px;
+    max-height: 24px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.author-blog {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    @include adaptiv-value("padding-top", 128, 25, 0);
+    @include adaptiv-value("padding-left", 280, 15, 0);
+    @include adaptiv-value("padding-bottom", 157, 7, 0);
+    max-height: 1518px;
+    background-color: #ffffff;
+    color: #232536;
+  }
+
+  &__tittle {
+    font-family: "Sen";
+    font-weight: 700;
+    @include adaptiv-value("font-size", 48, 18, 0);
+    @include adaptiv-value("line-height", 64, 20, 0);
+    @include adaptiv-value("letter-spacing", -2, 0, 0);
+    @include adaptiv-value("padding-bottom", 64, 20, 0);
+    // font-size: 48px;
+    // line-height: 64px;
+    // letter-spacing: -2px;
+    // padding-bottom: 64px;
+
+    @media (max-width: 768px) {
+      // flex-direction: column;
+      // align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    max-width: 1024px;
+    @include adaptiv-value("column-gap", 32, 16, 0);
+    // column-gap: 32px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__img {
+    @include adaptiv-value("width", 412, 300, 0);
+    @include adaptiv-value("height", 320, 0, 0);
+    // width: 412px;
+    height: 320px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    @include adaptiv-value("width", 580, 300, 0);
+    // width: 580px;
+    @include adaptiv-value("padding-top", 56, 2, 0);
+    @include adaptiv-value("padding-bottom", 56, 2, 0);
+    // padding-top: 56px;
+    // padding-bottom: 56px;
+    h4 {      
+      a{}
+      font-weight: 600;
+      @include adaptiv-value("font-size", 16, 13, 0);
+      @include adaptiv-value("line-height", 20, 17, 0);
+      @include adaptiv-value("letter-spacing", 3, 0, 0);
+      // font-size: 16px;
+      // line-height: 20px;
+      // letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #592ea9;
+      @include adaptiv-value("padding-bottom", 20, 10, 0);
+      // padding-bottom: 20px;
+    }
+
+    h3 {
+      font-family: "Sen";
+      font-weight: 700;
+      @include adaptiv-value("font-size", 36, 20, 0);
+      @include adaptiv-value("line-height", 48, 24, 0);
+      @include adaptiv-value("letter-spacing", -2, -2, 0);
+      @include adaptiv-value("padding-bottom", 16, 8, 0);
+      // font-size: 36px;
+      // line-height: 48px;
+      // letter-spacing: -2px;
+      // padding-bottom: 16px;
+    }
+
+    p {
+      font-weight: 400;
+      @include adaptiv-value("font-size", 16, 13, 0);
+      @include adaptiv-value("line-height", 28, 17, 0);
+      font-size: 16px;
+      line-height: 28px;
+      color: #6d6e76;
+    }
   }
 }
