@@ -120,3 +120,10 @@ $responsiveType: 2;
 @import "blocks/category";
 @import "blocks/privacypolicy";
 
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

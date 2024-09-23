@@ -5,88 +5,79 @@
 @import "min/join-team";
 @import "min/footer";
 
-.category-header {
+.category-section {
   &__container {
-    // @include adaptiv-value("padding-left", 80, 15, 0);
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: #232536;
+    max-height: 1600px;
+  }
+
+  &__row {
+    display: flex;
+    column-gap: 144px;
+    @include adaptiv-value("padding-left", 80, 15, 0);
+    @include adaptiv-value("padding-top", 128, 25, 0);
+    @include adaptiv-value("padding-bottom", 128, 25, 0);
+  }
+}
+.category-content {
+  &__header {
+    display: none;
+    flex-direction: column;
     @include adaptiv-value("padding-top", 80, 15, 0);
     @include adaptiv-value("padding-bottom", 80, 15, 0);
     max-height: 508px;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    background: rgb(244, 240, 248);
+    background-color: rgb(244, 240, 248);
     color: #232536;
   }
 
-  &__title {
+  &__header-title {
     font-family: "Sen";
     font-weight: 700;
     @include adaptiv-value("font-size", 56, 35, 0);
     @include adaptiv-value("line-height", 64, 50, 0);
     @include adaptiv-value("letter-spacing", -2, 0, 0);
     @include adaptiv-value("padding-bottom", 16, 8, 0);
-    // font-size: 56px;
-    // line-height: 64px;
     text-align: center;
-    // letter-spacing: -2px;
-    // padding-bottom: 16px;
+
+    animation: colortext 3s ease-in-out;
+    @keyframes colortext {
+      0% {
+        color: rgba(35, 37, 54, 0.1);
+      }
+      50% {
+        color: rgba(35, 37, 54, 0.6);
+      }
+      100% {
+        color: rgba(35, 37, 54, 1);
+      }
+    }
   }
 
-  &__description {
+  &__header-description {
     font-weight: 400;
     @include adaptiv-value("font-size", 16, 12, 0);
     @include adaptiv-value("line-height", 28, 17, 0);
     @include adaptiv-value("padding-bottom", 32, 16, 0);
-    // font-size: 16px;
-    // line-height: 28px;
+    //     // font-size: 16px;
+    //     // line-height: 28px;
     text-align: center;
     color: #6d6e76;
-    // padding-bottom: 32px;
   }
 
-  &__category {
+  &__header-category {
     font-weight: 500;
     @include adaptiv-value("font-size", 16, 13, 0);
     @include adaptiv-value("line-height", 20, 17, 0);
-    // font-size: 16px;
-    // line-height: 20px;
+    //     // font-size: 16px;
+    //     // line-height: 20px;
     text-align: center;
     letter-spacing: 3px;
     text-transform: uppercase;
   }
-}
-
-.startup {
-  display: none;
-}
-
-.business {
-  display: block;
-}
-
-.economy {
-  display: none;
-}
-
-.technology {
-  display: none;
-}
-
-.category-section {
-  &__container {
-    display: flex;
-    @include adaptiv-value("padding-left", 80, 15, 0);
-    @include adaptiv-value("padding-top", 128, 25, 0);
-    @include adaptiv-value("padding-bottom", 128, 25, 0);
-    column-gap: 144px;
-
-    background-color: #ffffff;
-    color: #232536;
-    max-height: 1600px;
-  }
-}
-.category-content {
-  // display: flex;
 
   &__body {
     display: flex;
@@ -94,10 +85,55 @@
     margin-bottom: 32px;
     max-height: 312px;
     max-width: 838px;
+    animation: colortext 3s ease-in-out;
+    @keyframes colortext {
+      0% {
+        color: rgba(35, 37, 54, 0.1);
+      }
+      50% {
+        color: rgba(35, 37, 54, 0.6);
+      }
+      100% {
+        color: rgba(35, 37, 54, 1);
+      }
+    }
   }
 
   &__img {
     align-self: center;
+    animation: imgopacity 1.2s ease-in-out;
+    @keyframes imgopacity {
+      0% {
+        opacity: 0.1;
+      }
+      20%{
+        opacity: 0.2;
+      }
+      30% {
+        opacity: 0.3;
+      }
+      40% {
+        opacity: 0.4;
+      }
+      50%{
+        opacity: 0.5;
+      }
+      60%{
+        opacity: 0.6;
+      }
+      70%{
+        opacity: 0.7;
+      }
+      80%{
+        opacity: 0.8;
+      }
+      90%{
+        opacity: 0.9;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
 
     img {
       width: 100%;
@@ -109,6 +145,21 @@
     width: 512px;
     padding-top: 38px;
     padding-bottom: 38px;
+
+    animation: colortext 1.2s ease-in-out;
+
+    @keyframes colortext {
+      0% {
+        color: rgba(35, 37, 54, 0.1);
+      }
+      50% {
+        color: rgba(35, 37, 54, 0.6);
+      }
+      100% {
+        color: rgba(35, 37, 54, 1);
+      }
+    }
+
     h4 {
       font-weight: 600;
       font-size: 16px;
@@ -117,6 +168,19 @@
       text-transform: uppercase;
       color: #592ea9;
       padding-bottom: 20px;
+
+      animation: colortwo 1.2s ease-in-out;
+      @keyframes colortwo {
+        0% {
+          color: rgba(89, 46, 169, 0.1);
+        }
+        50% {
+          color: rgba(89, 46, 169, 0.6);
+        }
+        100% {
+          color: rgba(89, 46, 169, 1);
+        }
+      }
     }
 
     h3 {
@@ -133,10 +197,25 @@
       font-size: 16px;
       line-height: 28px;
       color: #6d6e76;
+
+
+      animation: colorthree 1.2s ease-in-out;
+
+      @keyframes colorthree {
+        0% {
+          color: rgba(109, 110, 118, 0.1);
+        }
+        50% {
+          color: rgba(109, 110, 118, 0.6);
+        }
+        100% {
+          color: rgba(109, 110, 118, 1);
+        }
+      }
+
     }
   }
 }
-
 .category-tab {
   &__nav {
     display: flex;
@@ -154,6 +233,7 @@
     padding-left: 24px;
     padding-top: 24px;
     padding-bottom: 24px;
+    cursor: pointer;
 
     p {
       font-family: "Sen";
@@ -163,10 +243,10 @@
       letter-spacing: -1px;
     }
 
-    &:hover {
-      box-sizing: border-box;
-      border: 2px solid rgb(255, 208, 80, 0.3);
-      background: rgb(255, 208, 80);
-    }
+    // &:hover {
+    //   box-sizing: border-box;
+    //   border: 2px solid rgb(255, 208, 102, 0.7);
+    //   background: rgb(255, 208, 80);
+    // }
   }
 }
