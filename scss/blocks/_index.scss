@@ -9,9 +9,10 @@
 .content {
   // @include adaptiv-value("padding-left", 80, 30, 0);
   // @include adaptiv-value("padding-right", 80, 30, 0);
-  height: 5996px;
+  // height: 5996px;
   @include adaptiv-value("margin-top", 10, 2, 0);
   @include adaptiv-value("margin-bottom", 10, 2, 0);
+  // box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
   // max-height: max-content;
 }
 

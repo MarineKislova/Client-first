@@ -3,12 +3,15 @@ window.addEventListener("DOMContentLoaded", () => {
 
   function tabs({
     selectorTab,
+    selectorTabLink,
     selectorContent,
     selectorHeader,
     selectorParent,
     activeClass,
+    activeLinkClass,
   }) {
     const tabs = document.querySelectorAll(selectorTab);
+    const tabsLink = document.querySelectorAll(selectorTabLink);
     const tabsContent = document.querySelectorAll(selectorContent);
     const tabsHeader = document.querySelectorAll(selectorHeader);
     const tabsParent = document.querySelector(selectorParent);
@@ -30,6 +33,16 @@ window.addEventListener("DOMContentLoaded", () => {
           item.style.background = "#ffffff";
         }
       });
+
+      // tabsLink.forEach((item) => {
+      //   item.classList.remove(activeLinkClass);
+      //   if (!item.classList.contains(activeLinkClass)) {
+      //     item.style.color = "#696969";
+      //     // item.style.textDecoration = "none";
+      //     item.style.border = " 1.5px solid rgb(193, 193, 195)";
+      //     item.style.background = "#ffffff";
+      //   }
+      // });
     }
 
     function showTabContent(i) {
@@ -43,6 +56,14 @@ window.addEventListener("DOMContentLoaded", () => {
         tabs[i].style.background = "rgb(255, 208, 80)";
         // tabs[i].style.transition = "1s all";
       }
+      // tabsLink.classList.add(activeLinkClass);
+      // if (tabsLink[i].classList.contains(activeLinkClass)) {
+      //   tabsLink[i].style.color = "#696969";
+      //   // tabsLink[i].style.textDecoration = "underline";
+      //   tabsLink[i].style.border = "2px solid rgb(255, 208, 102, 0.7)";
+      //   tabsLink[i].style.background = "rgb(255, 208, 80)";
+      //   // tabsLink[i].style.transition = "1s all";
+      // }
     }
 
     hideTabContent();
@@ -55,6 +76,13 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     });
 
+    // tabsLink.forEach((item, i) => {
+    //   item.addEventListener("click", () => {
+    //     hideTabContent();
+    //     showTabContent(i);
+    //   });
+    // });
+
     tabsParent.addEventListener("click", (e) => {
       const target = e.target;
       if (target && target.classList.contains(tabs)) {
@@ -65,6 +93,14 @@ window.addEventListener("DOMContentLoaded", () => {
           }
         });
       }
+      // if (target && target.classList.contains(tabsLink)) {
+      //   tabsLink.forEach((item, i) => {
+      //     if (target == item) {
+      //       hideTabContent();
+      //       showTabContent(i);
+      //     }
+      //   });
+      // }
     });
   }
 
@@ -72,6 +108,7 @@ window.addEventListener("DOMContentLoaded", () => {
     selectorContent: ".category-content",
     selectorHeader: ".category-content__header",
     selectorTab: ".category-tab__tab",
+    // tabsLink: ".category__link",
     selectorParent: ".category-section",
     activeClass: ".category-tab__tab-active",
   });
