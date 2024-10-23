@@ -4,7 +4,7 @@
     // display: none;
     flex-direction: column;
     color: #232536;
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255);
     @include adaptiv-value("padding-left", 80, 15, 0);
     @include adaptiv-value("padding-top", 128, 16, 0);
     max-height: 1248px;
@@ -40,7 +40,7 @@
     @include adaptiv-value("padding-right", 28, 5, 0);
     text-align: center;
     background: rgb(244, 244, 244);
-    cursor: pointer;
+    // cursor: pointer;
 
     &:hover {
       background: rgb(251, 246, 234);

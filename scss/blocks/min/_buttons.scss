@@ -28,6 +28,8 @@
   @include adaptiv-value("font-size", 18, 12, 0);
   @include adaptiv-value("line-height", 24, 18, 0);
   color: rgba(35, 37, 54, 0.7);
+  text-align: center;
+  align-content: center;
 
   &:hover {
     background: #edc14a;

@@ -44,7 +44,7 @@
       @include adaptiv-value("line-height", 28, 14, 0);
       @include adaptiv-value("margin-bottom", 24, 12, 0);
 
-      span {
+      a {
         color: rgba(255, 208, 80, 1);
       }
     }

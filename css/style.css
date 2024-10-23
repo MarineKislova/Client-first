@@ -149,6 +149,9 @@ h6 {
   font-size: calc(12px + 6 * (100vw - 320px) / 1600);
   line-height: calc(18px + 6 * (100vw - 320px) / 1600);
   color: rgba(35, 37, 54, 0.7);
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .btn:hover {
   background: #edc14a;
@@ -311,6 +314,9 @@ h6 {
   font-size: calc(12px + 6 * (100vw - 320px) / 1600);
   line-height: calc(18px + 6 * (100vw - 320px) / 1600);
   color: rgba(35, 37, 54, 0.7);
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .btn:hover {
   background: #edc14a;
@@ -413,7 +419,7 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #232536;
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
   padding-left: calc(15px + 65 * (100vw - 320px) / 1600);
   padding-top: calc(16px + 112 * (100vw - 320px) / 1600);
   max-height: 1248px;
@@ -443,7 +449,6 @@ h6 {
   padding-right: calc(5px + 23 * (100vw - 320px) / 1600);
   text-align: center;
   background: rgb(244, 244, 244);
-  cursor: pointer;
 }
 .authors__item:hover {
   background: rgb(251, 246, 234);
@@ -798,8 +803,9 @@ h6 {
   line-height: calc(14px + 14 * (100vw - 320px) / 1600);
   margin-bottom: calc(12px + 12 * (100vw - 320px) / 1600);
 }
-.main-post p span {
+.main-post p a {
   color: rgb(255, 208, 80);
+  text-align: center;
 }
 .main-post p:last-child {
   margin-bottom: calc(24px + 24 * (100vw - 320px) / 1600);
@@ -1385,6 +1391,9 @@ h6 {
   font-size: calc(12px + 6 * (100vw - 320px) / 1600);
   line-height: calc(18px + 6 * (100vw - 320px) / 1600);
   color: rgba(35, 37, 54, 0.7);
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .btn:hover {
   background: #edc14a;
@@ -1547,6 +1556,9 @@ h6 {
   font-size: calc(12px + 6 * (100vw - 320px) / 1600);
   line-height: calc(18px + 6 * (100vw - 320px) / 1600);
   color: rgba(35, 37, 54, 0.7);
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .btn:hover {
   background: #edc14a;
@@ -1649,7 +1661,7 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #232536;
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
   padding-left: calc(15px + 65 * (100vw - 320px) / 1600);
   padding-top: calc(16px + 112 * (100vw - 320px) / 1600);
   max-height: 1248px;
@@ -1679,7 +1691,6 @@ h6 {
   padding-right: calc(5px + 23 * (100vw - 320px) / 1600);
   text-align: center;
   background: rgb(244, 244, 244);
-  cursor: pointer;
 }
 .authors__item:hover {
   background: rgb(251, 246, 234);
@@ -2034,7 +2045,7 @@ h6 {
   line-height: calc(14px + 14 * (100vw - 320px) / 1600);
   margin-bottom: calc(12px + 12 * (100vw - 320px) / 1600);
 }
-.blog-header__left p span {
+.blog-header__left p a {
   color: rgb(255, 208, 80);
 }
 .blog-header__right {
@@ -2227,6 +2238,9 @@ h6 {
   font-size: calc(12px + 6 * (100vw - 320px) / 1600);
   line-height: calc(18px + 6 * (100vw - 320px) / 1600);
   color: rgba(35, 37, 54, 0.7);
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .btn:hover {
   background: #edc14a;
@@ -2389,6 +2403,9 @@ h6 {
   font-size: calc(12px + 6 * (100vw - 320px) / 1600);
   line-height: calc(18px + 6 * (100vw - 320px) / 1600);
   color: rgba(35, 37, 54, 0.7);
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .btn:hover {
   background: #edc14a;
@@ -2491,7 +2508,7 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #232536;
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
   padding-left: calc(15px + 65 * (100vw - 320px) / 1600);
   padding-top: calc(16px + 112 * (100vw - 320px) / 1600);
   max-height: 1248px;
@@ -2521,7 +2538,6 @@ h6 {
   padding-right: calc(5px + 23 * (100vw - 320px) / 1600);
   text-align: center;
   background: rgb(244, 244, 244);
-  cursor: pointer;
 }
 .authors__item:hover {
   background: rgb(251, 246, 234);
@@ -3099,6 +3115,9 @@ h6 {
   font-size: calc(12px + 6 * (100vw - 320px) / 1600);
   line-height: calc(18px + 6 * (100vw - 320px) / 1600);
   color: rgba(35, 37, 54, 0.7);
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .btn:hover {
   background: #edc14a;
@@ -3261,6 +3280,9 @@ h6 {
   font-size: calc(12px + 6 * (100vw - 320px) / 1600);
   line-height: calc(18px + 6 * (100vw - 320px) / 1600);
   color: rgba(35, 37, 54, 0.7);
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .btn:hover {
   background: #edc14a;
@@ -3363,7 +3385,7 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #232536;
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
   padding-left: calc(15px + 65 * (100vw - 320px) / 1600);
   padding-top: calc(16px + 112 * (100vw - 320px) / 1600);
   max-height: 1248px;
@@ -3393,7 +3415,6 @@ h6 {
   padding-right: calc(5px + 23 * (100vw - 320px) / 1600);
   text-align: center;
   background: rgb(244, 244, 244);
-  cursor: pointer;
 }
 .authors__item:hover {
   background: rgb(251, 246, 234);
@@ -4004,6 +4025,9 @@ h6 {
   font-size: calc(12px + 6 * (100vw - 320px) / 1600);
   line-height: calc(18px + 6 * (100vw - 320px) / 1600);
   color: rgba(35, 37, 54, 0.7);
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .btn:hover {
   background: #edc14a;
@@ -4166,6 +4190,9 @@ h6 {
   font-size: calc(12px + 6 * (100vw - 320px) / 1600);
   line-height: calc(18px + 6 * (100vw - 320px) / 1600);
   color: rgba(35, 37, 54, 0.7);
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .btn:hover {
   background: #edc14a;
@@ -4268,7 +4295,7 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #232536;
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
   padding-left: calc(15px + 65 * (100vw - 320px) / 1600);
   padding-top: calc(16px + 112 * (100vw - 320px) / 1600);
   max-height: 1248px;
@@ -4298,7 +4325,6 @@ h6 {
   padding-right: calc(5px + 23 * (100vw - 320px) / 1600);
   text-align: center;
   background: rgb(244, 244, 244);
-  cursor: pointer;
 }
 .authors__item:hover {
   background: rgb(251, 246, 234);
@@ -4842,6 +4868,9 @@ h6 {
   font-size: calc(12px + 6 * (100vw - 320px) / 1600);
   line-height: calc(18px + 6 * (100vw - 320px) / 1600);
   color: rgba(35, 37, 54, 0.7);
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .btn:hover {
   background: #edc14a;
@@ -5004,6 +5033,9 @@ h6 {
   font-size: calc(12px + 6 * (100vw - 320px) / 1600);
   line-height: calc(18px + 6 * (100vw - 320px) / 1600);
   color: rgba(35, 37, 54, 0.7);
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .btn:hover {
   background: #edc14a;
@@ -5106,7 +5138,7 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #232536;
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
   padding-left: calc(15px + 65 * (100vw - 320px) / 1600);
   padding-top: calc(16px + 112 * (100vw - 320px) / 1600);
   max-height: 1248px;
@@ -5136,7 +5168,6 @@ h6 {
   padding-right: calc(5px + 23 * (100vw - 320px) / 1600);
   text-align: center;
   background: rgb(244, 244, 244);
-  cursor: pointer;
 }
 .authors__item:hover {
   background: rgb(251, 246, 234);
@@ -5692,6 +5723,9 @@ h6 {
   font-size: calc(12px + 6 * (100vw - 320px) / 1600);
   line-height: calc(18px + 6 * (100vw - 320px) / 1600);
   color: rgba(35, 37, 54, 0.7);
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .btn:hover {
   background: #edc14a;
@@ -5854,6 +5888,9 @@ h6 {
   font-size: calc(12px + 6 * (100vw - 320px) / 1600);
   line-height: calc(18px + 6 * (100vw - 320px) / 1600);
   color: rgba(35, 37, 54, 0.7);
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .btn:hover {
   background: #edc14a;
@@ -5956,7 +5993,7 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #232536;
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
   padding-left: calc(15px + 65 * (100vw - 320px) / 1600);
   padding-top: calc(16px + 112 * (100vw - 320px) / 1600);
   max-height: 1248px;
@@ -5986,7 +6023,6 @@ h6 {
   padding-right: calc(5px + 23 * (100vw - 320px) / 1600);
   text-align: center;
   background: rgb(244, 244, 244);
-  cursor: pointer;
 }
 .authors__item:hover {
   background: rgb(251, 246, 234);
@@ -6687,6 +6723,9 @@ h6 {
   font-size: calc(12px + 6 * (100vw - 320px) / 1600);
   line-height: calc(18px + 6 * (100vw - 320px) / 1600);
   color: rgba(35, 37, 54, 0.7);
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .btn:hover {
   background: #edc14a;
@@ -6849,6 +6888,9 @@ h6 {
   font-size: calc(12px + 6 * (100vw - 320px) / 1600);
   line-height: calc(18px + 6 * (100vw - 320px) / 1600);
   color: rgba(35, 37, 54, 0.7);
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .btn:hover {
   background: #edc14a;
@@ -6951,7 +6993,7 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #232536;
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
   padding-left: calc(15px + 65 * (100vw - 320px) / 1600);
   padding-top: calc(16px + 112 * (100vw - 320px) / 1600);
   max-height: 1248px;
@@ -6981,7 +7023,6 @@ h6 {
   padding-right: calc(5px + 23 * (100vw - 320px) / 1600);
   text-align: center;
   background: rgb(244, 244, 244);
-  cursor: pointer;
 }
 .authors__item:hover {
   background: rgb(251, 246, 234);
