@@ -88,8 +88,13 @@
 
   &__posts {
     display: flex;
+    flex-wrap: wrap-reverse;
+  }
+
+  &__block {
+    display: flex;
     flex-direction: column;
-    gap: 64px;
+    // gap: 64px;
     @include adaptiv-value("gap", 64, 15, 0);
   }
 

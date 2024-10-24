@@ -264,70 +264,77 @@ window.addEventListener("DOMContentLoaded", () => {
           icon: "icons/linkedin.svg",
         },
       ],
-    }
+    },
   ];
 
-  console.log(author.socialMedia);
+  function addAuthor(author, selectorList) {
+    const authorsList = document.querySelector(selectorList);
 
-  // create authors container
-  const authorsContainer = document.querySelector(".authors__container");
+    // create authors
+    author.forEach((item) => {
+      // const authorList = document.querySelector(".authors__list");
+      // create author item
+      const authorItem = document.createElement("div");
+      authorItem.classList.add("authors__item");
 
-  // create authors container title
-  authorsContainer.classList.add("authors__tittle");
-  document.querySelector(".authors__tittle").textContent = "List of Authors";
+      const authorImage = document.createElement("img");
+      const authorName = document.createElement("h4");
+      const authorTittle = document.createElement("p");
+      const authorBio = document.createElement("p");
+      //social media
+      const authorSocialMedia = document.createElement("div");
+      const socialMediaItem = document.createElement("a");
+      const socialMediaIcon = document.createElement("img");
+      authorImage.src = item.image;
+      authorImage.alt = item.alt;
+      authorName.textContent = item.name;
+      authorTittle.textContent = item.tittle;
 
-  // create authors container list
-  const authorsList = document.createElement("div");
-  authorsList.classList.add("authors__list");
-  authorsContainer.appendChild(authorsList);
-  // authorsList.appendChild(authorItem);
+      authorBio.textContent = item.bio;
+      authorSocialMedia.classList.add("authors__social-media");
+      authorSocialMedia.style.display = "flex";
+      authorSocialMedia.style.justifyContent = "center";
+      authorSocialMedia.style.gap = 10 + "px";
 
-  // create authors
-  author.forEach((item) => {
-    // create author item
-    const authorItem = document.createElement("div");
-    authorItem.classList.add("authors__item");
+      item.socialMedia.forEach((social) => {
+        socialMediaItem.href = social.link;
+        socialMediaItem.alt = social.name;
+        socialMediaIcon.src = social.icon;
+        socialMediaItem.appendChild(socialMediaIcon);
 
-    const authorImage = document.createElement("img");
-    const authorName = document.createElement("h4");
-    const authorTittle = document.createElement("p");
-    const authorBio = document.createElement("p");
-    //social media
-    const authorSocialMedia = document.createElement("div");
-    const socialMediaItem = document.createElement("a");
-    const socialMediaIcon = document.createElement("img");
-    authorImage.src = item.image;
-    authorImage.alt = item.alt;
-    authorName.textContent = item.name;
-    authorTittle.textContent = item.tittle;
+        socialMediaIcon.style.width = 32 + "px";
+        socialMediaIcon.style.height = 35 + "px";
+        socialMediaIcon.style.objectFit = "contain";
 
-    authorBio.textContent = item.bio;
-    authorSocialMedia.classList.add("authors__social-media");
-    authorSocialMedia.style.display = "flex";
-    authorSocialMedia.style.justifyContent = "center";
-    authorSocialMedia.style.gap = 10 + "px";
+        function resizeByScreen() {
+          if (window.innerWidth < 768) {
+            socialMediaIcon.style.width = 14 + "px";
+            socialMediaIcon.style.height = 28 + "px";
+          } else {
+            socialMediaIcon.style.width = 32 + "px";
+            socialMediaIcon.style.height = 35 + "px";
+          }
+        }
 
-    item.socialMedia.forEach((social) => {
-      socialMediaItem.href = social.link;
-      socialMediaItem.alt = social.name;
-      socialMediaIcon.src = social.icon;
-      socialMediaItem.appendChild(socialMediaIcon);
+        resizeByScreen(); // resize social media icons based on window width;
 
-      socialMediaIcon.style.width = 32 + "px";
-      socialMediaIcon.style.height = 35 + "px";
-      socialMediaIcon.style.objectFit = "contain";
+        // clone social media item to avoid creating duplicate elements in the DOM
 
-      // clone social media item to avoid creating duplicate elements in the DOM
+        authorSocialMedia.appendChild(socialMediaItem.cloneNode(true)); // clone social media item for each social media item to add to social media div to avoid creating duplicate elements in the DOM
+      });
 
-      authorSocialMedia.appendChild(socialMediaItem.cloneNode(true)); // clone social media item for each social media item to add to social media div to avoid creating duplicate elements in the DOM
+      authorItem.appendChild(authorImage);
+      authorItem.appendChild(authorName);
+      authorItem.appendChild(authorTittle);
+      // authorItem.appendChild(authorBio);
+      authorItem.appendChild(authorSocialMedia);
+
+      authorsList.appendChild(authorItem);
     });
+  }
 
-    authorItem.appendChild(authorImage);
-    authorItem.appendChild(authorName);
-    authorItem.appendChild(authorTittle);
-    // authorItem.appendChild(authorBio);
-    authorItem.appendChild(authorSocialMedia);
-
-    authorsList.appendChild(authorItem);
-  });
+  addAuthor(author, ".authors__list");
+  function deleteAuthor() {
+    author.splice(4, 5); // remove the first 5 authors from the array to prevent duplicate authors from appearing on the second page
+  }
 });
