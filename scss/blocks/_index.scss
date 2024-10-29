@@ -144,10 +144,11 @@
   &__featured-img {
     @include adaptiv-value("padding-top", 64, 0, 0);
     @include adaptiv-value("padding-left", 32, 10, 0);
+
     img {
       width: 100%;
-      height: 100%;
-      object-fit: contain;
+      max-height: 100%;
+      object-fit: cover;
     }
   }
 
@@ -521,6 +522,7 @@
 }
 
 // ================================
+
 .testimonial {
   &__container {
     display: flex;
@@ -530,20 +532,20 @@
     @include adaptiv-value("padding-left", 80, 15, 0);
     @include adaptiv-value("padding-top", 104, 20, 0);
     // @include adaptiv-value("height", 568, 400, 0);
-
+    max-width: 1360px;
     max-height: 556px;
-    // height: 568px;
+    // max-height: 568px;
   }
 
   &__left {
     background: rgb(251, 246, 234);
     border-right: 1px solid rgb(109, 110, 118, 0.1);
     // @include adaptiv-value("width", 581.5, 160, 0);
-    max-width: 581.5px;
+    // max-width: 581.5px;
     @include adaptiv-value("height", 464, 370, 0);
     @include adaptiv-value("padding-left", 112, 10, 0);
     @include adaptiv-value("padding-right", 70, 10, 0);
-    @include adaptiv-value("padding-top", 92, 30, 0);
+    @include adaptiv-value("padding-top", 52, 30, 0);
 
     h4 {
       font-weight: 600;
@@ -583,90 +585,89 @@
   }
 
   &__right {
+    display: flex;
+    flex-direction: column;
+    // align-content: center;
     background: rgb(251, 246, 234);
     // @include adaptiv-value("width", 778.5, 160, 0);
-    max-width: 778.5px;
+    // max-width: 778.5px;
     @include adaptiv-value("height", 464, 370, 0);
-    @include adaptiv-value("padding-left", 112, 10, 0);
-    @include adaptiv-value("padding-right", 170, 10, 0);
-    @include adaptiv-value("padding-top", 80, 25, 0);
-    // width: 778.5px;
-    // height: 464px;
-    // padding-left: 112px;
-    // padding-right: 170px;
-    // padding-top: 80px;
-    p {
-      text-align: start;
-      font-family: "Sen";
-      font-weight: 700;
-      @include adaptiv-value("font-size", 24, 14, 0);
-      @include adaptiv-value("line-height", 32, 18, 0);
-      // font-size: 24px;
-      // line-height: 32px;
-    }
+    // @include adaptiv-value("padding-left", 112, 10, 0);
+    // @include adaptiv-value("padding-right", 170, 10, 0);
+    @include adaptiv-value("padding-top", 52, 25, 0);
   }
 
-  &__bottom {
+  &__line {
     display: flex;
-
-    @include adaptiv-value("padding-top", 121, 20, 0);
-    // padding-top: 121px;
-
-    @media (max-width: 768px) {
-      flex-wrap: wrap;
-      @include adaptiv-value("margin-left", 300, 30, 0);
-    }
   }
 
   &__author {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    // justify-content: center;
-    margin-right: 155px;
+    // align-content: center;
+    // width: 500px;
+  }
 
-    h4 {
-      font-family: "Sen";
-      font-weight: 700;
-      @include adaptiv-value("font-size", 24, 14, 0);
-      @include adaptiv-value("line-height", 32, 22, 0);
-      text-align: center;
-      // font-size: 24px;
-      // line-height: 32px;
-    }
+  &__author-bio {
+    text-align: center;
+    max-width: 700px;
+    align-self: center;
+    font-family: "Sen";
+    font-weight: 700;
+    @include adaptiv-value("padding-bottom", 46, 20, 0);
+    @include adaptiv-value("font-size", 24, 14, 0);
+    @include adaptiv-value("line-height", 32, 18, 0);
+  }
 
-    p {
-      font-weight: 400;
-      @include adaptiv-value("font-size", 16, 12, 0);
-      @include adaptiv-value("line-height", 28, 18, 0);
-      text-align: center;
-      // font-size: 16px;
-      // line-height: 28px;
-      color: #6d6e76;
+  &__author-img {
+    width: 70px;
+    // height: 50px;
+    align-self: center;
+    @include adaptiv-value("padding-top", 121, 20, 0);
+    // padding-top: 121px;
+    // border-radius: 50%;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
     }
   }
 
-  &__arrow {
+  &__author-link {
+    font-family: "Sen";
+    font-weight: 700;
+    @include adaptiv-value("font-size", 24, 14, 0);
+    @include adaptiv-value("line-height", 32, 22, 0);
+    text-align: center;
+  }
+
+  p {
+    font-weight: 400;
+    @include adaptiv-value("font-size", 16, 12, 0);
+    @include adaptiv-value("line-height", 28, 18, 0);
+    text-align: center;
+    // font-size: 16px;
+    // line-height: 28px;
+    color: #6d6e76;
+  }
+
+  &__pagination {
     display: flex;
-    // align-self: baseline;
+    align-self: center;
+    padding-left: 130px;
 
-    img {
-      @include adaptiv-value("width", 48, 25, 0);
-      @include adaptiv-value("height", 48, 25, 0);
-      @include adaptiv-value("margin-right", 20, 0, 0);
-      @include adaptiv-value("margin-top", 0, 20, 0);
-      // width: 48px;
-      // height: 48px;
-      margin-right: 20px;
-      &:hover {
-        cursor: pointer;
-        transform: scale3d(1.5, 1.5, 0.3);
-        transition: transform 200ms;
-      }
-    }
-
-    // @media (max-width: 768px) {
-    //   padding-bottom: 50px;
-    // }
+    font-family: "Sen";
+    font-weight: 700;
+    @include adaptiv-value("font-size", 56, 26, 0);
+    // @include adaptiv-value("line-height", 28, 22, 0);
+    text-align: center;
+    // font-size: 16px;
+    // line-height: 28px;
+    color: #6d6e76;
+    padding-top: 16px;
+    @include adaptiv-value("gap", 100, 5, 0);
+    gap: 100px;
+    cursor: pointer;
   }
 }
