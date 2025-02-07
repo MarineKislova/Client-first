@@ -19,17 +19,16 @@
     
 
     function initResize() {
-      console.log("resize");
       width = wrapper.offsetWidth;
       sliderLine.style.width = width * slides.length + "px";
-      // wrapper.style.maxHeight = 100 +"%";
+      wrapper.style.maxHeight = 100 +"%";
       wrapper.style.overflow = "hidden";
       slides.forEach((item) => {
         item.style.width = width + "px";
         item.style.height = "auto";
-        // item.style.height = 100 +"%";
+        item.style.height = 100 +"%";
       });
-      console.log(width);
+      // console.log(width);
       rollSlider();
     }
 
