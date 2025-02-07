@@ -11,27 +11,30 @@ window.addEventListener("DOMContentLoaded", () => {
     author.splice(4, 7); // remove the first 5 authors from the array to prevent duplicate authors from appearing on the second page
   }
 
+
   if (document.querySelector(".authors__list") !== null) {
     addAuthor(author, ".authors__list");
   }
 
-  if (document.querySelector(".testimonial__line")) {
+  if (document.querySelector(".testimonial__line")!== null) {
     testimonialAuthor(author, ".testimonial__line");
   }
 
-  if (document.querySelector(".testimonial__right")) {
+  if(document.querySelector(".testimonial__line")) {
     slider({
       lineSelector: ".testimonial__line",
       wrapperSelector: ".testimonial__right",
       itemSelector: ".testimonial__author",
       arrowNextSelector: ".testimonial__pagination-next",
       arrowPrevSelector: ".testimonial__pagination-prev",
-    });
+    })
   }
 
   if (document.querySelector(".authors__lists") !== null) {
     addAuthor(author, ".authors__lists", deleteAuthor());
   }
+
+  
 
   if (document.querySelector(".testimonial__author") !== null) {
   }
@@ -56,4 +59,8 @@ window.addEventListener("DOMContentLoaded", () => {
       arrowPrevSelector: ".all-post__prev",
     });
   }
+
+  
+
+  
 });
