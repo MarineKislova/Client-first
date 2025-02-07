@@ -6,6 +6,8 @@
     justify-content: center;
     color: #232536;
     background-color: #ffffff;
+    @include adaptiv-value("padding-top", 128, 28, 0);
+    @include adaptiv-value("padding-bottom", 128, 28, 0);
   }
 
   &__body {

@@ -25,7 +25,6 @@
   &__img {
     // @include adaptiv-value("width", 251, 200, 0);
     width: 251px;
-    
 
     img {
       width: 100%;
@@ -104,6 +103,7 @@
     max-height: 1518px;
     background-color: #ffffff;
     color: #232536;
+    @include adaptiv-value("gap", 64, 20, 0);
   }
 
   &__tittle {
@@ -112,7 +112,7 @@
     @include adaptiv-value("font-size", 48, 18, 0);
     @include adaptiv-value("line-height", 64, 20, 0);
     @include adaptiv-value("letter-spacing", -2, 0, 0);
-    @include adaptiv-value("padding-bottom", 64, 20, 0);
+    // @include adaptiv-value("padding-bottom", 64, 20, 0);
     // font-size: 48px;
     // line-height: 64px;
     // letter-spacing: -2px;
@@ -157,8 +157,8 @@
     @include adaptiv-value("padding-bottom", 56, 2, 0);
     // padding-top: 56px;
     // padding-bottom: 56px;
-    h4 {      
-      a{}
+    h4 {
+      // a{}
       font-weight: 600;
       @include adaptiv-value("font-size", 16, 13, 0);
       @include adaptiv-value("line-height", 20, 17, 0);

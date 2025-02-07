@@ -10,6 +10,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #000;
 }
 
 .content {
@@ -517,6 +518,8 @@ h6 {
           justify-content: center;
   color: #232536;
   background-color: #ffffff;
+  padding-top: calc(28px + 100 * (100vw - 320px) / 1600);
+  padding-bottom: calc(28px + 100 * (100vw - 320px) / 1600);
 }
 .join-team__body {
   display: -webkit-box;
@@ -1107,18 +1110,42 @@ h6 {
 }
 .special-post__left img {
   width: 100%;
-  height: 100%;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+@media (max-width: 1024px) {
+  .special-post__left img {
+    width: 115%;
+  }
+}
+@media (max-width: 768px) {
+  .special-post__left img {
+    width: 125%;
+  }
+}
+@media (max-width: 575px) {
+  .special-post__left img {
+    width: 135%;
+  }
+}
+@media (max-width: 425px) {
+  .special-post__left img {
+    width: 145%;
+  }
 }
 .special-post__right {
   grid-column: 7 span/-1;
   grid-row: 1;
   margin-top: 8.3%;
   z-index: 1;
-  background-color: #ffffff;
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+          backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.51);
   width: calc(145px + 561 * (100vw - 320px) / 1600);
   height: calc(250px + 334 * (100vw - 320px) / 1600);
   padding-top: calc(5px + 75 * (100vw - 320px) / 1600);
@@ -1255,13 +1282,11 @@ h6 {
   background-color: #ffffff;
   padding-left: calc(15px + 65 * (100vw - 320px) / 1600);
   padding-top: calc(20px + 84 * (100vw - 320px) / 1600);
-  max-width: 1360px;
-  max-height: 556px;
+  max-height: 568px;
 }
 .testimonial__left {
   background: rgb(251, 246, 234);
   border-right: 1px solid rgba(109, 110, 118, 0.1);
-  height: calc(370px + 94 * (100vw - 320px) / 1600);
   padding-left: calc(10px + 102 * (100vw - 320px) / 1600);
   padding-right: calc(10px + 60 * (100vw - 320px) / 1600);
   padding-top: calc(30px + 22 * (100vw - 320px) / 1600);
@@ -1298,7 +1323,6 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   background: rgb(251, 246, 234);
-  height: calc(370px + 94 * (100vw - 320px) / 1600);
   padding-top: calc(25px + 27 * (100vw - 320px) / 1600);
 }
 .testimonial__line {
@@ -1358,7 +1382,9 @@ h6 {
   display: flex;
   -ms-flex-item-align: center;
       align-self: center;
-  padding-left: 130px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Sen";
   font-weight: 700;
   font-size: calc(26px + 30 * (100vw - 320px) / 1600);
@@ -1368,6 +1394,11 @@ h6 {
   gap: calc(5px + 95 * (100vw - 320px) / 1600);
   gap: 100px;
   cursor: pointer;
+}
+@media (max-width: 425px) {
+  .testimonial__pagination {
+    gap: 50px;
+  }
 }
 
 .btns {
@@ -1773,6 +1804,8 @@ h6 {
           justify-content: center;
   color: #232536;
   background-color: #ffffff;
+  padding-top: calc(28px + 100 * (100vw - 320px) / 1600);
+  padding-bottom: calc(28px + 100 * (100vw - 320px) / 1600);
 }
 .join-team__body {
   display: -webkit-box;
@@ -2039,6 +2072,7 @@ h6 {
   padding-left: calc(15px + 65 * (100vw - 320px) / 1600);
   padding-right: calc(5px + 75 * (100vw - 320px) / 1600);
   padding-top: calc(10px + 70 * (100vw - 320px) / 1600);
+  padding-bottom: calc(10px + 70 * (100vw - 320px) / 1600);
 }
 .blog-header__left {
   display: -webkit-box;
@@ -2096,13 +2130,14 @@ h6 {
           flex-direction: column;
   color: #232536;
   background-color: #ffffff;
-  max-height: 2070px;
+  max-height: 2270px;
   padding-left: calc(15px + 65 * (100vw - 320px) / 1600);
   padding-top: calc(10px + 54 * (100vw - 320px) / 1600);
 }
 .all-posts__tittle {
   font-family: "Sen";
   font-weight: 700;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.51);
   font-size: calc(28px + 20 * (100vw - 320px) / 1600);
   line-height: calc(34px + 30 * (100vw - 320px) / 1600);
   letter-spacing: calc(0px + -2 * (100vw - 320px) / 1600);
@@ -2113,6 +2148,7 @@ h6 {
   display: flex;
   -ms-flex-wrap: wrap-reverse;
       flex-wrap: wrap-reverse;
+  padding-top: calc(10px + 54 * (100vw - 320px) / 1600);
 }
 .all-posts__block {
   display: -webkit-box;
@@ -2129,7 +2165,7 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   gap: calc(8px + 24 * (100vw - 320px) / 1600);
-  min-width: 1146px;
+  max-width: 1146px;
   max-height: 318px;
 }
 .all-posts__item-img {
@@ -2174,6 +2210,7 @@ h6 {
 .all-posts__pagination {
   font-family: "Sen";
   font-weight: 700;
+  color: #000107;
   font-size: calc(10px + 14 * (100vw - 320px) / 1600);
   line-height: calc(18px + 14 * (100vw - 320px) / 1600);
   padding-top: calc(20px + 44 * (100vw - 320px) / 1600);
@@ -2187,7 +2224,6 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  color: #6d6e76;
 }
 .all-posts__pagination a:last-child {
   padding-left: 17px;
@@ -2636,6 +2672,8 @@ h6 {
           justify-content: center;
   color: #232536;
   background-color: #ffffff;
+  padding-top: calc(28px + 100 * (100vw - 320px) / 1600);
+  padding-bottom: calc(28px + 100 * (100vw - 320px) / 1600);
 }
 .join-team__body {
   display: -webkit-box;
@@ -3523,6 +3561,8 @@ h6 {
           justify-content: center;
   color: #232536;
   background-color: #ffffff;
+  padding-top: calc(28px + 100 * (100vw - 320px) / 1600);
+  padding-bottom: calc(28px + 100 * (100vw - 320px) / 1600);
 }
 .join-team__body {
   display: -webkit-box;
@@ -3799,7 +3839,7 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: calc(18px + 14 * (100vw - 320px) / 1600);
+  gap: calc(16px + 16 * (100vw - 320px) / 1600);
 }
 .aboutus-header__left {
   z-index: 1;
@@ -3829,9 +3869,15 @@ h6 {
   letter-spacing: calc(0px + -2 * (100vw - 320px) / 1600);
 }
 .aboutus-header__right {
-  width: calc(150px + 247 * (100vw - 320px) / 1600);
+  width: calc(140px + 257 * (100vw - 320px) / 1600);
   padding-top: calc(25px + 39 * (100vw - 320px) / 1600);
   max-height: 356px;
+}
+@media (max-width: 1024px) {
+  .aboutus-header__right {
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.31);
+  }
 }
 .aboutus-header__right p {
   font-weight: 400;
@@ -3841,22 +3887,17 @@ h6 {
   text-align: justify;
 }
 
-.overview {
-  max-height: 510px;
+.mision-vision {
   position: relative;
-  top: calc(-13px + -50 * (100vw - 320px) / 1600);
 }
-.overview img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .mision-vision__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -3865,8 +3906,28 @@ h6 {
   padding-left: calc(15px + 65 * (100vw - 320px) / 1600);
   color: rgb(35, 37, 54);
   padding-top: calc(15px + 113 * (100vw - 320px) / 1600);
-  margin-top: calc(-13px + -50 * (100vw - 320px) / 1600);
-  max-height: 569px;
+  padding-bottom: calc(15px + 113 * (100vw - 320px) / 1600);
+  max-height: 699px;
+}
+.mision-vision__top img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.mision-vision__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: calc(18px + 14 * (100vw - 320px) / 1600);
+     -moz-column-gap: calc(18px + 14 * (100vw - 320px) / 1600);
+          column-gap: calc(18px + 14 * (100vw - 320px) / 1600);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: calc(14px + 50 * (100vw - 320px) / 1600);
 }
 .mision-vision__left {
   max-width: 516px;
@@ -3922,6 +3983,9 @@ h6 {
   padding-bottom: 64px;
 }
 
+.our-team {
+  margin-top: calc(-13px + -50 * (100vw - 320px) / 1600);
+}
 .our-team__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3935,9 +3999,9 @@ h6 {
 @media (max-width: 950px) {
   .our-team__container {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -4016,6 +4080,7 @@ h6 {
   padding-top: calc(12px + 70 * (100vw - 320px) / 1600);
   padding-bottom: calc(12px + 70 * (100vw - 320px) / 1600);
   padding-left: calc(5px + 59 * (100vw - 320px) / 1600);
+  max-width: 519px;
 }
 .started__right h3 {
   font-family: "Sen";
@@ -4443,6 +4508,8 @@ h6 {
           justify-content: center;
   color: #232536;
   background-color: #ffffff;
+  padding-top: calc(28px + 100 * (100vw - 320px) / 1600);
+  padding-bottom: calc(28px + 100 * (100vw - 320px) / 1600);
 }
 .join-team__body {
   display: -webkit-box;
@@ -4817,6 +4884,7 @@ h6 {
   max-height: 1518px;
   background-color: #ffffff;
   color: #232536;
+  gap: calc(20px + 44 * (100vw - 320px) / 1600);
 }
 .author-blog__tittle {
   font-family: "Sen";
@@ -4824,7 +4892,6 @@ h6 {
   font-size: calc(18px + 30 * (100vw - 320px) / 1600);
   line-height: calc(20px + 44 * (100vw - 320px) / 1600);
   letter-spacing: calc(0px + -2 * (100vw - 320px) / 1600);
-  padding-bottom: calc(20px + 44 * (100vw - 320px) / 1600);
 }
 @media (max-width: 768px) {
   .author-blog__tittle {
@@ -5296,6 +5363,8 @@ h6 {
           justify-content: center;
   color: #232536;
   background-color: #ffffff;
+  padding-top: calc(28px + 100 * (100vw - 320px) / 1600);
+  padding-bottom: calc(28px + 100 * (100vw - 320px) / 1600);
 }
 .join-team__body {
   display: -webkit-box;
@@ -6161,6 +6230,8 @@ h6 {
           justify-content: center;
   color: #232536;
   background-color: #ffffff;
+  padding-top: calc(28px + 100 * (100vw - 320px) / 1600);
+  padding-bottom: calc(28px + 100 * (100vw - 320px) / 1600);
 }
 .join-team__body {
   display: -webkit-box;
@@ -7171,6 +7242,8 @@ h6 {
           justify-content: center;
   color: #232536;
   background-color: #ffffff;
+  padding-top: calc(28px + 100 * (100vw - 320px) / 1600);
+  padding-bottom: calc(28px + 100 * (100vw - 320px) / 1600);
 }
 .join-team__body {
   display: -webkit-box;

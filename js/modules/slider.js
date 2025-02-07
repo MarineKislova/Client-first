@@ -26,7 +26,7 @@
       wrapper.style.overflow = "hidden";
       slides.forEach((item) => {
         item.style.width = width + "px";
-        item.style.height = "auto";
+        // item.style.height = "auto";
         // item.style.height = 100 +"%";
       });
       console.log(width);

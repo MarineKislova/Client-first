@@ -1,3 +1,5 @@
+const testimonials = document.querySelector(".testimonial__line")
+
 function testimonialAuthor(author, selectorContainer) {
     const container = document.querySelector(selectorContainer);
 
