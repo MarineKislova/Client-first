@@ -1403,10 +1403,11 @@ h6 {
   gap: 100px;
   cursor: pointer;
 }
-@media (max-width: 425px) {
-  .testimonial__pagination {
-    gap: 50px;
-  }
+.testimonial__pagination-prev {
+  font-size: 36px;
+}
+.testimonial__pagination-next {
+  font-size: 36px;
 }
 
 .btns {
