@@ -1284,6 +1284,14 @@ h6 {
   padding-top: calc(20px + 84 * (100vw - 320px) / 1600);
   max-height: 568px;
 }
+@media (max-width: 375px) {
+  .testimonial__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .testimonial__left {
   background: rgb(251, 246, 234);
   border-right: 1px solid rgba(109, 110, 118, 0.1);

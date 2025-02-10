@@ -550,6 +550,10 @@
     @include adaptiv-value("padding-top", 104, 20, 0);
     // @include adaptiv-value("height", 568, 568, 0);
     max-height: 568px;
+
+    @media (max-width:375px) {
+      flex-direction: column;
+    }
   }
 
   &__left {
