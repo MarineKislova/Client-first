@@ -82,8 +82,6 @@
   }
 }
 
-
-
 .mision-vision {
   position: relative;
 
@@ -104,12 +102,12 @@
     max-height: 699px;
   }
 
-  &__top{
+  &__top {
     img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-          }
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
   }
 
   &__body {
@@ -173,20 +171,12 @@
       @include adaptiv-value("letter-spacing", -1, 0, 0);
       @include adaptiv-value("padding-bottom", 16, 6, 0);
       font-weight: 700;
-      //   font-size: 28px;
-      //   line-height: 40px;
-      //   letter-spacing: -1px;
-      // padding-bottom: 16px;
     }
     p {
       font-weight: 400;
       @include adaptiv-value("font-size", 16, 12, 0);
       @include adaptiv-value("line-height", 28, 24, 0);
-      @include adaptiv-value("padding-bottom", 0, 0, 0);
-      //   font-size: 16px;
-      //   line-height: 28px;
-      color: #6d6e76;
-      padding-bottom: 64px;
+      @include adaptiv-value("padding-bottom", 64, 14, 0);
     }
   }
 }

@@ -345,11 +345,12 @@
 
 // ================================
 .special-post {
+  // display: flex;
+
   &__container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     position: relative;
-
     color: #232536;
     background-color: #ffffff;
     @include adaptiv-value("padding-left", 80, 15, 0);
@@ -357,7 +358,6 @@
     @include adaptiv-value("padding-top", 128, 16, 0);
     // @include adaptiv-value("height", 833, 330, 0);
     // height: 705px;
-
     max-height: 833px;
   }
 
@@ -365,9 +365,7 @@
     grid-column: 1 / span 9;
     grid-row: 1;
     @include adaptiv-value("width", 949, 250, 0);
-    // @include adaptiv-value("height", 705, 150, 0);
-    // max-width: 949px;
-    // max-height: 705px;
+
     img {
       width: 100%;
       max-height: fit-content;
