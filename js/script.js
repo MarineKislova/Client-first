@@ -39,9 +39,10 @@ window.addEventListener("DOMContentLoaded", () => {
   // переход на таб другой страницы
   const urlParams = new URLSearchParams(window.location.search);
   const tabId = urlParams.get("tab"); //контейнер с табами
-  const tabLink = document.querySelectorAll(".category-tab__tab"); //ссылки на табы внутри контейнера с табами
-  const tabContent = document.querySelectorAll(".category-content__content"); //контейнеры с контентом табов
-  const contentHeader = document.querySelectorAll(".category-content__header"); //заголовок контента таба
+  const tabLink = document.querySelectorAll(".tab__item"); //ссылки на табы внутри контейнера с табами
+  const tabContent = document.querySelectorAll(".section-content__container"); //контейнеры с контентом табов
+
+  const contentHeader = document.querySelectorAll(".header__container"); //заголовок контента таба
 
   if (tabId) {
     // Деактивируем все табы и контент
@@ -50,45 +51,48 @@ window.addEventListener("DOMContentLoaded", () => {
       // tab.style.display = "none";
     });
     tabContent.forEach((content) => {
-      // content.classList.remove("active");
+      content.classList.remove("active");
       content.style.display = "none";
     });
     contentHeader.forEach((header) => {
-      // header.classList.remove("active");
+      header.classList.remove("active");
       header.style.display = "none";
     });
 
     // Активируем нужный таб и соответствующий контент
     const selectedTab = document.querySelector(
-      `.category-tab__tab[data-tab="${tabId}"]`
+      `.tab__item[data-tab="${tabId}"]`
     );
 
     const selectedContent = document.querySelector(
-      `.category-content__content[data-tab="${tabId}"]`
+      `.section-content__container[data-tab="${tabId}"]`
     );
 
     const selectedContentHeader = document.querySelector(
-      `.category-content__header[data-tab="${tabId}"]`
+      `.header__container[data-tab="${tabId}"]`
     );
 
-    console.log(selectedTab, selectedContent, selectedContentHeader);
+    console.log(selectedTab, selectedContent);
 
-    if (selectedTab && selectedContent && selectedContentHeader) {
+    if (selectedTab && selectedContent) {
       selectedTab.classList.add("active");
+      // selectedTab.style.backgroundColor = "lemon";
       // selectedTab.style.display = "block";
-      selectedTab.style.backgroundColor = "yellow";
-      selectedContent.classList.add("active");
+      selectedTab.style.backgroundColor = "rgb(255, 208, 80)";
+      selectedTab.style.border = "rgb(255, 208, 80)";
+      // selectedContent.classList.add("active");
       selectedContent.style.display = "block";
-      selectedContentHeader.classList.add("active");
+      // selectedContentHeader.classList.add("active");
       selectedContentHeader.style.display = "block";
     }
-  } else if (document.querySelectorAll(".category-content__conent")) {
+  } else if (document.querySelector(".section-content__container")) {
     tabs({
-      selectorTab: ".category-tab__tab",
-      selectorContent: ".category-content__content",
-      selectorHeader: ".category-content__header",
-      selectorParent: ".category-section",
-      // activeClass: "active",
+      selectorTab: ".tab__item",
+      // selectorLink: ".tab__link",
+      selectorContent: ".section-content__container",
+      selectorHeader: ".header__container",
+      selectorParent: ".section-content",
+      activeClass: "active",
     });
   }
 
@@ -101,4 +105,22 @@ window.addEventListener("DOMContentLoaded", () => {
       arrowPrevSelector: ".all-post__prev",
     });
   }
+
+  // Burger Menu
+  const btnBurger = document.querySelector(".menu-burger__btn");
+  btnBurger.addEventListener("click", function () {
+    this.classList.toggle("active");
+    if (btnBurger.classList.contains("active")) {
+      btnBurger.style.backgroundColor = "#5d5656";
+      btnBurger.style.color = "#efa8a8";
+      btnBurger.style.maxWidth = 100 + "px";
+      btnBurger.style.borderTopLeftRadius = 10 + "px";
+      btnBurger.style.borderBottomLeftRadius = 10 + "px";
+    
+    } else if (!btnBurger.classList.contains("active")){
+      btnBurger.style.backgroundColor  = "inherit";
+      btnBurger.style.color = "inherit";
+    }
+    document.querySelector(".menu-burger__list").classList.toggle("open");
+  });
 });

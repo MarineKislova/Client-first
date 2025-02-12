@@ -1,5 +1,6 @@
 function tabs({
   selectorTab,
+  selectorLink,
   selectorContent,
   selectorHeader,
   selectorParent,
@@ -7,17 +8,18 @@ function tabs({
 }) {
   const urlParams = new URLSearchParams(window.location.search);
   const tabId = urlParams.get("tab");
-
   const tabs = document.querySelectorAll(selectorTab);
   const tabsContent = document.querySelectorAll(selectorContent);
   const tabsHeader = document.querySelectorAll(selectorHeader);
   const tabsParent = document.querySelector(selectorParent);
-
+  
   function hideTabContent() {
     tabsContent.forEach((item) => {
+      item.classList.remove(activeClass);
       item.style.display = "none";
     });
     tabsHeader.forEach((item) => {
+      item.classList.remove(activeClass);
       item.style.display = "none";
     });
 

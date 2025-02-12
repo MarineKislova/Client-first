@@ -1,10 +1,3 @@
-@import "min/nav";
-@import "min/buttons";
-@import "min/items_categories";
-@import "min/authors";
-@import "min/join-team";
-@import "min/footer";
-
 .header {
   &__container {
     display: flex;
@@ -114,7 +107,7 @@
   &__container {
     display: flex;
     align-self: center;
-    flex-direction: row-reverse;
+
     @include adaptiv-value("padding-left", 80, 15, 0);
     @include adaptiv-value("padding-top", 128, 25, 0);
     @include adaptiv-value("padding-bottom", 128, 25, 0);
@@ -139,7 +132,6 @@
 }
 .tab {
   &__item {
-    a{}
     display: flex;
     @include adaptiv-value("width", 296, 120, 0);
     @include adaptiv-value("height", 96, 50, 0);
@@ -159,7 +151,7 @@
       }
     }
 
-    a {
+    p {
       font-family: "Sen";
       font-weight: 700;
       @include adaptiv-value("font-size", 28, 16, 0);

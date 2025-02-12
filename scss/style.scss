@@ -110,6 +110,15 @@ $responsiveType: 2;
   }
 }
 
+@import "blocks/min/nav";
+@import "blocks/min/burger-menu";
+@import "blocks/min/buttons";
+@import "blocks/min/items_categories";
+@import "blocks/min/authors";
+@import "blocks/min/join-team";
+@import "blocks/min/footer";
+
+
 @import "blocks/index";
 @import "blocks/blog";
 @import "blocks/blogpost";
@@ -119,11 +128,17 @@ $responsiveType: 2;
 @import "blocks/category";
 @import "blocks/privacypolicy";
 
+@import "blocks/draft";
+
 .show {
   display: block;
 }
 
 .hide {
   display: none;
+}
+
+.open {
+  display: flex !important;
 }
 
