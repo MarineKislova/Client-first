@@ -9,6 +9,12 @@
   <li>Tab and anchor link navigation – smooth scrolling to specific sections.</li>
   <li>Cross-tab navigation between pages – preserves user interaction logic.</li>
 </ul>
+<h2>Technologies Used:</h2>
+<ul>
+  <li>HTML</li>
+  <li>SCSS</li>
+  <li>JavaScript</li>
+</ul>
     <p>
     The project is optimized for fast loading speeds and cross-browser
       compatibility.
