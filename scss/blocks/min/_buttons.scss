@@ -13,6 +13,10 @@
   background-color: #ffffff;
   cursor: pointer;
 
+  @media (max-width: 925px) {
+    display: none;
+  }
+
   &:hover {
     background: rgba(255, 245, 238, 1);
     color: rgba(35, 37, 54, 1);

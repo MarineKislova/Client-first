@@ -62,8 +62,9 @@
     @include adaptiv-value("margin-bottom", 24, 12, 0);
 
     a {
-      color: rgba(255, 208, 80, 1);
+      color: rgb(250, 237, 201);
       text-align: center;
+      font-weight: bolder;
     }
 
     &:last-child {

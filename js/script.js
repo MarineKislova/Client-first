@@ -111,15 +111,17 @@ window.addEventListener("DOMContentLoaded", () => {
   btnBurger.addEventListener("click", function () {
     this.classList.toggle("active");
     if (btnBurger.classList.contains("active")) {
-      btnBurger.style.backgroundColor = "#5d5656";
-      btnBurger.style.color = "#efa8a8";
-      btnBurger.style.maxWidth = 100 + "px";
-      btnBurger.style.borderTopLeftRadius = 10 + "px";
-      btnBurger.style.borderBottomLeftRadius = 10 + "px";
-    
-    } else if (!btnBurger.classList.contains("active")){
-      btnBurger.style.backgroundColor  = "inherit";
-      btnBurger.style.color = "inherit";
+      btnBurger.textContent = "X";
+      btnBurger.style.backgroundColor = "inherit";
+      btnBurger.style.backdropFilter = "inherit";
+      btnBurger.style.position = "fixed";
+      btnBurger.style.top = 3 + "px";
+      btnBurger.style.width = 10 + "px";
+    } else if (!btnBurger.classList.contains("active")) {
+      btnBurger.textContent = "Menu";
+      btnBurger.style.width = "inherit";
+      btnBurger.style.position = "inherit";
+      btnBurger.style.backgroundColor = "rgba(68, 72, 108, 0.51)";
     }
     document.querySelector(".menu-burger__list").classList.toggle("open");
   });

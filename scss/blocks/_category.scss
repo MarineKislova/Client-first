@@ -5,6 +5,8 @@
 @import "min/join-team";
 @import "min/footer";
 
+/* --------------------------- */
+
 .header {
   &__container {
     display: flex;
@@ -54,73 +56,18 @@
     text-transform: uppercase;
   }
 }
-
-.section__container {
-  display: flex;
-  // flex-direction: column;
-  background-color: #ffffff;
-  color: #232536;
-  max-height: 3040px;
-}
-
-.tabs {
-  &__container {
-    display: flex;
-    flex-direction: column;
-    @include adaptiv-value("row-gap", 24, 12, 0);
-    @include adaptiv-value("margin-left", 192, 10, 0);
-
-    @media (max-width: 768px) {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-  }
-}
-.tab {
-  &__item {
-    display: flex;
-    @include adaptiv-value("width", 296, 120, 0);
-    @include adaptiv-value("height", 96, 50, 0);
-    @include adaptiv-value("column-gap", 16, 4, 0);
-    @include adaptiv-value("margin-left", 16, 4, 0);
-    @include adaptiv-value("margin-bottom", 16, 12, 0);
-    box-sizing: border-box;
-    border: 1.5px solid rgb(193, 193, 195);
-    @include adaptiv-value("padding-top", 24, 12, 0);
-    @include adaptiv-value("padding-bottom", 24, 12, 0);
-    @include adaptiv-value("padding-left", 24, 12, 0);
-    cursor: pointer;
-
-    img {
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
-
-    p {
-      font-family: "Sen";
-      font-weight: 700;
-      @include adaptiv-value("font-size", 28, 16, 0);
-      @include adaptiv-value("line-height", 40, 26, 0);
-      @include adaptiv-value("letter-spacing", -1, 0, 0);
-      // font-size: 28px;
-      // line-height: 40px;
-      // letter-spacing: -1px;
-    }
-  }
-}
-
 .section {
   &__container {
     display: flex;
-    align-self: center;
     flex-direction: row-reverse;
-    @include adaptiv-value("padding-left", 80, 15, 0);
-    @include adaptiv-value("padding-top", 128, 25, 0);
-    @include adaptiv-value("padding-bottom", 128, 25, 0);
+    background-color: #ffffff;
+    color: #232536;
+    max-height: 3040px;
 
-    @media (max-width: 768px) {
-      flex-direction: column-reverse;
+    @media (max-width: 780px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
@@ -131,17 +78,19 @@
     @include adaptiv-value("row-gap", 24, 12, 0);
     @include adaptiv-value("margin-left", 192, 10, 0);
 
-    @media (max-width: 768px) {
+    @media (max-width: 780px) {
       flex-direction: row;
       flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
 .tab {
   &__item {
-    a{}
     display: flex;
-    @include adaptiv-value("width", 296, 120, 0);
+    flex-direction: row;
+    @include adaptiv-value("width", 296, 95, 0);
     @include adaptiv-value("height", 96, 50, 0);
     @include adaptiv-value("column-gap", 16, 4, 0);
     @include adaptiv-value("margin-left", 16, 4, 0);
@@ -150,16 +99,24 @@
     border: 1.5px solid rgb(193, 193, 195);
     @include adaptiv-value("padding-top", 24, 12, 0);
     @include adaptiv-value("padding-bottom", 24, 12, 0);
-    @include adaptiv-value("padding-left", 24, 12, 0);
+    @include adaptiv-value("padding-left", 24, 2, 0);
+
     cursor: pointer;
 
     img {
-      @media (max-width: 768px) {
+      @media (max-width: 1000px) {
         display: none;
       }
     }
 
-    a {
+    @media (max-width: 780px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    span {
       font-family: "Sen";
       font-weight: 700;
       @include adaptiv-value("font-size", 28, 16, 0);
@@ -181,6 +138,7 @@
     @include adaptiv-value("margin-bottom", 32, 16, 0);
     @include adaptiv-value("width", 838, 300, 0);
     animation: colortext 3s ease-in-out;
+
     @keyframes colortext {
       0% {
         color: rgba(35, 37, 54, 0.1);
@@ -193,14 +151,15 @@
       }
     }
 
-    @media (max-width: 768px) {
-      flex-direction: column;
-      // width: 160px;
+    @media (max-width: 780px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
     }
   }
 
   &__item-img {
-    // display: flex;
     align-self: center;
     justify-content: center;
     animation: imgopacity 1.2s ease-in-out;
