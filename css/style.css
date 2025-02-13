@@ -320,7 +320,7 @@ h6 {
   -webkit-column-gap: 5px;
      -moz-column-gap: 5px;
           column-gap: 5px;
-  z-index: 10;
+  z-index: 12;
   -webkit-backdrop-filter: blur(16px) saturate(280%);
           backdrop-filter: blur(16px) saturate(280%);
   background-color: rgba(68, 72, 108, 0.51);
@@ -357,7 +357,7 @@ h6 {
   width: 250px;
   top: 0;
   right: 0;
-  z-index: 1;
+  z-index: 10;
   padding: 20px;
   text-transform: uppercase;
   font-family: "Kanit";
@@ -2906,7 +2906,7 @@ h6 {
   margin-bottom: calc(12px + 12 * (100vw - 320px) / 1600);
 }
 .blog-header__left p a {
-  color: rgb(255, 208, 80);
+  color: rgb(112, 84, 5);
 }
 .blog-header__right {
   display: -webkit-box;

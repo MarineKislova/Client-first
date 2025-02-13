@@ -16,7 +16,7 @@
     justify-content: center;
     column-gap: 5px;
     // position: fixed;
-    z-index: 10;
+    z-index: 12;
     backdrop-filter: blur(16px) saturate(280%);
     background-color: rgba(68, 72, 108, 0.51);
     border-radius: 5px;
@@ -47,7 +47,7 @@
     width: 250px;
     top: 0;
     right: 0;
-    z-index: 1;
+    z-index: 10;
     padding: 20px;
     text-transform: uppercase;
     font-family: "Kanit";
