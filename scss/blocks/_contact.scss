@@ -11,7 +11,6 @@
     display: flex;
     @include adaptiv-value("padding-top", 128, 25, 0);
     @include adaptiv-value("padding-left", 80, 15, 0);
-    // @include adaptiv-value("padding-bottom", 152, 5, 0);
     background-color: #ffffff;
     color: #232536;
     max-height: 345px;
@@ -60,7 +59,6 @@
     background-color: #ffffff;
     justify-content: center;
     @include adaptiv-value("padding-top", 64, 5, 0);
-    // padding-top: 64px;
     max-height: 309px;
     padding-bottom: 5px;
   }
@@ -68,43 +66,32 @@
   &__body {
     display: flex;
     justify-content: space-between;
-    // display: grid;
-    // grid-template-columns: repeat(autofill, minmax(94px, 294px));
     background: rgb(89, 46, 169);
     @include adaptiv-value("width", 768, 300, 0);
-    // max-width: 768px;
     @include adaptiv-value("gap", 42, 30, 0);
-    // gap: 42px;
+
   }
 
   &__left {
     @include adaptiv-value("width", 294, 160, 0);
-    // width: 294px;
     @include adaptiv-value("padding-left", 64, 32, 0);
     @include adaptiv-value("padding-top", 48, 16, 0);
     @include adaptiv-value("padding-bottom", 48, 16, 0);
-    // padding-left: 64px;
-    // padding-top: 48px;
-    // padding-bottom: 48px;
+
   }
 
   &__right {
     @include adaptiv-value("width", 294, 160, 0);
-    // width: 294px;
     @include adaptiv-value("padding-right", 73.65, 21.65, 0);
     @include adaptiv-value("padding-top", 48, 16, 0);
     @include adaptiv-value("padding-bottom", 54, 22, 0);
-    // padding-right: 73.65px;
-    // padding-top: 48px;
-    // padding-bottom: 54px;
+ 
   }
 }
 .one {
   font-weight: 400;
   @include adaptiv-value("font-size", 14, 10, 0);
   @include adaptiv-value("line-height", 20, 12, 0);
-  //   font-size: 14px;
-  //   line-height: 20px;
   opacity: 0.6;
   border-bottom: 1px solid rgb(255, 255, 255, 0.1);
   padding-bottom: 15.5px;
@@ -114,8 +101,6 @@
   font-weight: 700;
   @include adaptiv-value("font-size", 20, 12, 0);
   @include adaptiv-value("line-height", 32, 24, 0);
-  //   font-size: 20px;
-  //   line-height: 32px;
   padding-top: 16.5px;
 
   &:nth-child(3n) {
@@ -135,8 +120,6 @@
   font-weight: 400;
   @include adaptiv-value("font-size", 16, 10, 0);
   @include adaptiv-value("line-height", 28, 20, 0);
-  //   font-size: 16px;
-  //   line-height: 28px;
   opacity: 0.6;
 }
 

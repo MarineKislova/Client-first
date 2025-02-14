@@ -7,13 +7,8 @@
 
 // ================================
 .content {
-  // @include adaptiv-value("padding-left", 80, 30, 0);
-  // @include adaptiv-value("padding-right", 80, 30, 0);
-  // height: 5996px;
   @include adaptiv-value("margin-top", 10, 2, 0);
   @include adaptiv-value("margin-bottom", 10, 2, 0);
-  // box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-  // max-height: max-content;
 }
 
 // ================================
@@ -23,7 +18,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     color: #ffffff;
-    // @include adaptiv-value("height", 720, 220, 0);
     @include adaptiv-value("padding-top", 208, 15, 0);
     @include adaptiv-value("padding-left", 80, 15, 0);
     @include adaptiv-value("padding-bottom", 192, 10, 0);
@@ -85,21 +79,14 @@
     @include adaptiv-value("gap", 32, 5, 0);
     background-color: #ffffff;
     color: #232536;
-
-    // @media (min-width: 1441px) {
-    //   height: 1050px;
-    //   padding-bottom: 61px;
-    // }
   }
 
   &__featured {
-    // grid-area: featured;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
     @include adaptiv-value("width", 733, 400, 0);
-    // width: 733px;
 
     h3 {
       display: flex;
@@ -133,7 +120,6 @@
 
     h4 {
       font-family: "Sen";
-
       font-weight: 700;
       @include adaptiv-value("font-size", 28, 10, 0);
       @include adaptiv-value("line-height", 40, 14, 0);
@@ -179,9 +165,6 @@
       @include adaptiv-value("font-size", 36, 12, 0);
       @include adaptiv-value("line-height", 28, 12, 0);
       @include adaptiv-value("padding-left", 240, 10, 0);
-      // font-size: 16px;
-      // line-height: 28px;
-      // padding-left: 300px;
       color: #592ea9;
       align-items: center;
 
@@ -199,9 +182,6 @@
       @include adaptiv-value("font-size", 14, 8, 0);
       @include adaptiv-value("line-height", 20, 14, 0);
       @include adaptiv-value("padding-left", 32, 10, 0);
-      // font-size: 14px;
-      // line-height: 20px;
-      // padding-left: 32px;
 
       span {
         color: #4c4c4c;
@@ -214,9 +194,6 @@
       @include adaptiv-value("line-height", 32, 16, 0);
       @include adaptiv-value("padding-left", 32, 10, 0);
       font-weight: 700;
-      // font-size: 24px;
-      // line-height: 32px;
-      // padding-left: 32px;
 
       &:last-child {
         padding-bottom: 0px;
@@ -236,10 +213,8 @@
     display: flex;
     justify-content: space-evenly;
     margin: 0 auto;
-    /* Lavender */
     background: rgb(244, 240, 248);
     color: #232536;
-    // @include adaptiv-value("height", 528, 350, 0);
     max-height: 500px;
     justify-content: space-evenly;
     background-image: url(../img/about_us/Group_9200.png);
@@ -326,10 +301,7 @@
     background-color: #ffffff;
     @include adaptiv-value("padding-top", 128, 5, 0);
     @include adaptiv-value("padding-left", 80, 15, 0);
-    // width: 1280px;
-    // @include adaptiv-value("padding-right", 97, 30, 0);
     color: rgb(35, 37, 54);
-    // height: 452px;
     max-height: 519px;
   }
 
@@ -355,10 +327,7 @@
     color: #232536;
     background-color: #ffffff;
     @include adaptiv-value("padding-left", 80, 15, 0);
-    // @include adaptiv-value("padding-right", 80, 0, 0);
     @include adaptiv-value("padding-top", 128, 16, 0);
-    // @include adaptiv-value("height", 833, 330, 0);
-    // height: 705px;
     max-height: 833px;
   }
 
@@ -396,17 +365,10 @@
     grid-row: 1;
     margin-top: 8.3%;
     z-index: 1;
-
-    // @include adaptiv-value("top", 121, 12, 0);
-    // @include adaptiv-value("left", 574, 110, 0);
     backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(255, 255, 255, 0.51);
     @include adaptiv-value("width", 706, 145, 0);
     @include adaptiv-value("height", 584, 250, 0);
-    // max-height: 584px;
-
-    // height: 584px;
-    // @include adaptiv-value("padding", 80, 15, 0);
     @include adaptiv-value("padding-top", 80, 5, 0);
     @include adaptiv-value("padding-left", 80, 5, 0);
     @include adaptiv-value("padding-right", 80, 5, 0);
@@ -446,13 +408,11 @@
 .authors {
   &__container {
     display: flex;
-    // display: none;
     flex-direction: column;
     color: #232536;
     background-color: #ffffff;
     @include adaptiv-value("padding-left", 80, 15, 0);
     @include adaptiv-value("padding-top", 128, 16, 0);
-    // @include adaptiv-value("height", 548, 350, 0);
     max-height: 548px;
   }
 
@@ -476,23 +436,13 @@
     background-color: #ffffff;
     @include adaptiv-value("padding-left", 80, 15, 0);
     @include adaptiv-value("padding-top", 96, 0, 0);
-    // @include adaptiv-value("height", 52, 162, 0);
-
     max-height: 148px;
-
-    // @media (max-width:600) {
-    //   height: 548px;
-    //   padding-top: 80px;
-    // }
   }
 
   &__tittle {
     display: flex;
     font-weight: 400;
-
-    // @include adaptiv-value("width", 136, 120, 0);
     @include adaptiv-value("height", 32, 30, 0);
-    // width: 136px;
     text-align: start;
     align-self: center;
     color: #6d6e76;
@@ -518,15 +468,12 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-self: center;
-    // margin-bottom: 20px;
   }
 
   &__link {
     display: flex;
     @include adaptiv-value("margin-left", 112, 42, 0);
     @include adaptiv-value("margin-top", 0, 10, 0);
-    // margin-top: 15px;
-    // margin-left: 102px;
     @include adaptiv-value("width", 136, 120, 0);
 
     img {
@@ -547,7 +494,6 @@
 
     @include adaptiv-value("padding-left", 80, 15, 0);
     @include adaptiv-value("padding-top", 104, 20, 0);
-    // @include adaptiv-value("height", 568, 568, 0);
     max-height: 568px;
 
     @media (max-width: 375px) {
@@ -558,9 +504,6 @@
   &__left {
     background: rgb(251, 246, 234);
     border-right: 1px solid rgb(109, 110, 118, 0.1);
-    // @include adaptiv-value("width", 581.5, 160, 0);
-    // max-width: 581.5px;
-    // @include adaptiv-value("height", 464, 370, 0);
     @include adaptiv-value("padding-left", 112, 10, 0);
     @include adaptiv-value("padding-right", 70, 10, 0);
     @include adaptiv-value("padding-top", 52, 30, 0);
@@ -571,11 +514,7 @@
       @include adaptiv-value("line-height", 20, 14, 0);
       @include adaptiv-value("letter-spacing", 3, 2, 0);
       @include adaptiv-value("padding-bottom", 12, 6, 0);
-      // font-size: 16px;
-      // line-height: 20px;
-      // letter-spacing: 3px;
       text-transform: uppercase;
-      // padding-bottom: 12px;
     }
 
     h3 {
@@ -586,10 +525,6 @@
       @include adaptiv-value("line-height", 48, 24, 0);
       @include adaptiv-value("letter-spacing", -2, 0, 0);
       @include adaptiv-value("padding-bottom", 16, 10, 0);
-      // font-size: 36px;
-      // line-height: 48px;
-      // letter-spacing: -2px;
-      // padding-bottom: 16px;
     }
 
     p {
@@ -597,21 +532,13 @@
       font-weight: 400;
       @include adaptiv-value("font-size", 16, 12, 0);
       @include adaptiv-value("line-height", 28, 24, 0);
-      // font-size: 16px;
-      // line-height: 28px;
     }
   }
 
   &__right {
     display: flex;
     flex-direction: column;
-    // align-content: center;
     background: rgb(251, 246, 234);
-    // @include adaptiv-value("width", 778.5, 160, 0);
-    // max-width: 778.5px;
-    // @include adaptiv-value("height", 464, 370, 0);
-    // @include adaptiv-value("padding-left", 112, 10, 0);
-    // @include adaptiv-value("padding-right", 170, 10, 0);
     @include adaptiv-value("padding-top", 52, 25, 0);
   }
 
@@ -622,8 +549,6 @@
   &__author {
     display: flex;
     flex-direction: column;
-    // align-content: center;
-    // width: 500px;
   }
 
   &__author-bio {
@@ -639,11 +564,8 @@
 
   &__author-img {
     width: 70px;
-    // height: 50px;
     align-self: center;
     @include adaptiv-value("padding-top", 121, 20, 0);
-    // padding-top: 121px;
-    // border-radius: 50%;
 
     img {
       width: 100%;
@@ -665,8 +587,6 @@
     @include adaptiv-value("font-size", 16, 12, 0);
     @include adaptiv-value("line-height", 28, 18, 0);
     text-align: center;
-    // font-size: 16px;
-    // line-height: 28px;
     color: #6d6e76;
   }
 
@@ -674,15 +594,13 @@
     display: flex;
     align-self: center;
     align-items: center;
-    // padding-left: 130px;
 
     font-family: "Sen";
     font-weight: 700;
     @include adaptiv-value("font-size", 56, 26, 0);
-    // @include adaptiv-value("line-height", 28, 22, 0);
+
     text-align: center;
-    // font-size: 16px;
-    // line-height: 28px;
+
     color: #6d6e76;
     padding-top: 16px;
     @include adaptiv-value("gap", 100, 5, 0);
@@ -690,7 +608,7 @@
     cursor: pointer;
 
     @media (max-width: 425px) {
-      // gap: 50px;
+
     }
   }
 

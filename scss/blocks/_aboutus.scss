@@ -17,13 +17,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // padding-bottom: -3000px;
   }
 
   &__body {
     display: flex;
     @include adaptiv-value("gap", 32, 16, 0);
-    // gap: 32px;
   }
 
   &__left {
@@ -31,11 +29,11 @@
     position: relative;
     background: rgb(255, 255, 255);
     @include adaptiv-value("width", 624, 140, 0);
-    // width: 624px;
+
     max-height: 356px;
 
     @include adaptiv-value("padding", 64, 25, 0);
-    // padding: 64px;
+
     h5 {
       font-weight: 500;
       @include adaptiv-value("font-size", 16, 12, 0);
@@ -54,9 +52,6 @@
       @include adaptiv-value("font-size", 48, 18, 0);
       @include adaptiv-value("line-height", 64, 28, 0);
       @include adaptiv-value("letter-spacing", -2, 0, 0);
-      //   font-size: 48px;
-      //   line-height: 64px;
-      //   letter-spacing: -2px;
     }
   }
 
@@ -74,8 +69,6 @@
       font-weight: 400;
       @include adaptiv-value("font-size", 16, 12, 0);
       @include adaptiv-value("line-height", 28, 24, 0);
-      //   font-size: 16px;
-      //   line-height: 28px;
       color: #4c4c4c;
       text-align: justify;
     }
@@ -86,19 +79,17 @@
   position: relative;
 
   &__container {
-    // @include adaptiv-value("top", -13, -13, 0);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     background: rgb(244, 240, 248);
 
     @include adaptiv-value("gap", 32, 8, 0);
-    // gap: 32px;
     @include adaptiv-value("padding-left", 80, 15, 0);
     color: rgb(35, 37, 54);
     @include adaptiv-value("padding-top", 128, 15, 0);
     @include adaptiv-value("padding-bottom", 128, 15, 0);
-    // @include adaptiv-value("margin-top", -63, -13, 0);
     max-height: 699px;
   }
 
@@ -112,10 +103,7 @@
 
   &__body {
     display: flex;
-    // @include adaptiv-value("gap", 32, 18, 0);
-    // gap: 32px;
     @include adaptiv-value("column-gap", 32, 18, 0);
-    // column-gap: 32px;
     align-items: center;
     justify-content: space-around;
     @include adaptiv-value("padding-bottom", 64, 14, 0);
@@ -138,7 +126,6 @@
       @include adaptiv-value("letter-spacing", -1, 0, 0);
       @include adaptiv-value("padding-bottom", 16, 6, 0);
       font-weight: 700;
-      // text-align: justify;
     }
     p {
       font-weight: 400;
@@ -146,7 +133,6 @@
       @include adaptiv-value("line-height", 28, 24, 0);
       @include adaptiv-value("padding-bottom", 64, 14, 0);
       color: #6d6e76;
-      // text-align: justify;
     }
   }
 
@@ -158,11 +144,8 @@
       @include adaptiv-value("line-height", 20, 16, 0);
       @include adaptiv-value("letter-spacing", 3, 0, 0);
       @include adaptiv-value("padding-bottom", 24, 14, 0);
-      //   font-size: 16px;
-      //   line-height: 20px;
-      //   letter-spacing: 3px;
       text-transform: uppercase;
-      //   padding-bottom: 24px;
+ 
     }
     h3 {
       font-family: "Sen";

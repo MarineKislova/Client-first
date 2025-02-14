@@ -9,23 +9,20 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background-color: #000;
+  // background-color: #000;
 }
 .content {
   flex: 1 1 auto;
-  
 }
 
-
-
-$maxWidthContainer: 1440; // макетное значение
-$maxWidth: 1920; //max размер экрана, подкотрый будем расширять макетное значение
+$maxWidthContainer: 1440;
+$maxWidth: 1920;
 $minWidth: 320;
 $mainColor: #000;
 $fontSize: 16;
 $fontFamily: "Inter";
-$containerPadding: 0; // (30 = по 15px слева и справа, 0 = отсутствует отступ)
-$containerWidth: $maxWidthContainer + $containerPadding; //ширина для первого брейкпоинта
+$containerPadding: 0;
+$containerWidth: $maxWidthContainer + $containerPadding;
 
 //Percent
 @function percent($px, $from: 100) {
@@ -43,17 +40,11 @@ $containerWidth: $maxWidthContainer + $containerPadding; //ширина для �
   @return $result;
 }
 
-// Брейк-поїнти
-$pc: toEm(
-  $containerWidth
-); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
-$tablet: toEm(991.98); // Планшети, деякі телефони в горизонтальному положенні
-$mobile: toEm(767.98); // Телефони L
-$mobileSmall: toEm(479.98); // Телефони S
+$pc: toEm($containerWidth);
+$tablet: toEm(991.98);
+$mobile: toEm(767.98);
+$mobileSmall: toEm(479.98);
 
-// Тип адаптива:
-// 1 = чуйність (у контейнера немає брейкпоінтів),
-// 2 = по брейк-поїнт (контейнер змінює свою ширину по брейк-поїнт)
 $responsiveType: 2;
 
 @import "_null.scss";
@@ -61,7 +52,6 @@ $responsiveType: 2;
 @import "_mixins.scss";
 
 @if ($responsiveType==2) {
-  // Чуйна
   [class*="__container"] {
     @if ($maxWidthContainer>0) {
       max-width: toRem($containerWidth);
@@ -85,7 +75,6 @@ $responsiveType: 2;
     }
   }
 } @else {
-  // Брейк-поїнтами
   [class*="__container"] {
     margin: 0 auto;
     @if ($maxWidthContainer>0) {
@@ -118,7 +107,6 @@ $responsiveType: 2;
 @import "blocks/min/join-team";
 @import "blocks/min/footer";
 
-
 @import "blocks/index";
 @import "blocks/blog";
 @import "blocks/blogpost";
@@ -127,8 +115,6 @@ $responsiveType: 2;
 @import "blocks/contact";
 @import "blocks/category";
 @import "blocks/privacypolicy";
-
-// @import "blocks/draft";
 
 .show {
   display: block;
@@ -141,4 +127,3 @@ $responsiveType: 2;
 .open {
   display: flex !important;
 }
-

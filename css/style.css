@@ -10,7 +10,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #000;
 }
 
 .content {
@@ -1766,7 +1765,6 @@ h6 {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   margin: 0 auto;
-  /* Lavender */
   background: rgb(244, 240, 248);
   color: #232536;
   max-height: 500px;

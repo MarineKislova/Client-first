@@ -32,7 +32,6 @@
 
   &__author-img {
     @include adaptiv-value("width", 48, 30, 0);
-    // @include adaptiv-value("height", 48, 0, 0);
     height: 48px;
 
     img {
@@ -108,10 +107,8 @@
   &__content {
     @include adaptiv-value("width", 843, 280, 0);
     @include adaptiv-value("padding-top", 16, 2, 0);
-    // width: 843px;
     max-height: 1298px;
     text-align: justify;
-    // padding-top: 16px;
   }
 
   &__content-text {
@@ -122,21 +119,16 @@
       @include adaptiv-value("line-height", 48, 22, 0);
       @include adaptiv-value("letter-spacing", -2, 0, 0);
       @include adaptiv-value("padding-top", 48, 15, 0);
-      // font-size: 36px;
-      // line-height: 48px;
-      // letter-spacing: -2px;
       color: #232536;
-      // padding-top: 48px;
+
     }
     p {
       font-weight: 400;
       @include adaptiv-value("font-size", 16, 12, 0);
       @include adaptiv-value("line-height", 28, 18, 0);
       @include adaptiv-value("padding-top", 24, 10, 0);
-      // font-size: 16px;
-      // line-height: 28px;
       color: #6d6e76;
-      // padding-top: 24px;
+
     }
     ul li {
       list-style: url(../icons/pointer.svg);
@@ -146,9 +138,6 @@
       @include adaptiv-value("font-size", 24, 12, 0);
       @include adaptiv-value("line-height", 32, 14, 0);
       @include adaptiv-value("padding-top", 24, 10, 0);
-      // font-size: 24px;
-      // line-height: 32px;
-      // padding-top: 24px;
       color: #161722;
       opacity: 0.78;
     }
@@ -199,7 +188,6 @@
 
     h3 {
       @include adaptiv-value("padding-bottom", 16, 4, 0);
-      // padding-bottom: 16px;
       font-family: "Sen";
       font-weight: 700;
       @include adaptiv-value("font-size", 28, 18, 0);

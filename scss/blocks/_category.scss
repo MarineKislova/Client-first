@@ -122,9 +122,7 @@
       @include adaptiv-value("font-size", 28, 16, 0);
       @include adaptiv-value("line-height", 40, 26, 0);
       @include adaptiv-value("letter-spacing", -1, 0, 0);
-      // font-size: 28px;
-      // line-height: 40px;
-      // letter-spacing: -1px;
+      
     }
   }
 }
